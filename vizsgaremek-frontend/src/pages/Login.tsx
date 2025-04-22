@@ -97,6 +97,16 @@ export default function Login() {
           </form>
 
           {error && <p>{error}</p>}
+
+          <p className="mt-10 text-center text-sm/6 text-gray-500">
+            Not a member?{" "}
+            <a
+              href="/register"
+              className="font-semibold text-indigo-600 hover:text-indigo-500"
+            >
+              Sign up here
+            </a>
+          </p>
         </div>
       </div>
     </>
