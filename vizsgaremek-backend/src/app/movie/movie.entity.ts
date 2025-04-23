@@ -1,5 +1,7 @@
-import { Entity, Column } from 'typeorm';
+import { Entity, Column, OneToMany } from 'typeorm';
 import { BaseEntity } from '../common/base.entity';
+import { Like } from '../like/like.entity';
+import { Rating } from '../rating/rating.entity';
 
 @Entity()
 export class Movie extends BaseEntity {
@@ -7,11 +9,20 @@ export class Movie extends BaseEntity {
   title: string;
 
   @Column()
-  year: number;
+  releaseYear: number;
 
   @Column('text')
   description: string;
 
-  @Column('float', { default: 0 })
-  averageRating: number;
+  @Column({ type: 'varchar', length: 2048, nullable: true })
+  posterImg?: string;
+
+  @Column({ type: 'varchar', length: 2048, nullable: true })
+  thumbnailImg?: string;
+
+  @OneToMany(() => Rating, (rating) => rating.movie)
+  ratings: Rating[];
+
+  @OneToMany(() => Like, (like) => like.movie)
+  likes: Like[];
 }

@@ -18,7 +18,6 @@ export class MovieService {
     private movieRepository: Repository<Movie>,
   ) {}
 
-  // Film hozzáadása
   async create(movie: CreateMovieInputDto): Promise<Movie> {
     try {
       const createMoviePayload = this.movieRepository.create({ ...movie });
@@ -29,7 +28,6 @@ export class MovieService {
     }
   }
 
-  // Filmek lekérdezése
   async findAll(limit = 21, offset = 0): Promise<Movie[]> {
     try {
       return await this.movieRepository.find({
@@ -59,7 +57,6 @@ export class MovieService {
     }
   }
 
-  // Film keresése cím alapján
   async findByTitle(
     searchInput: string,
     limit = 10,
@@ -83,7 +80,6 @@ export class MovieService {
     }
   }
 
-  // Film frissítése
   async update(id: string, movieUpdateInput: Partial<Movie>): Promise<Movie> {
     try {
       await this.movieRepository.update(id, movieUpdateInput);
@@ -102,7 +98,6 @@ export class MovieService {
     }
   }
 
-  // Film törlése
   async remove(id: string): Promise<void> {
     try {
       const result = await this.movieRepository.delete(id);
