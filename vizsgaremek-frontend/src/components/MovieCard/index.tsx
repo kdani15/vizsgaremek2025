@@ -22,7 +22,7 @@ export default function MovieCard({
         backgroundImage: `url(${thumbnailImg})`,
         textShadow: "0 1px 1px black",
       }}
-      className="bg-cover bg-center block h-64 rounded-lg shadow-md text-white p-4 font-semibold uppercase"
+      className="bg-cover bg-center block h-64 rounded-lg shadow-md text-white p-4 font-semibold uppercase opacity-90 hover:opacity-100 transition"
     >
       {title}
     </a>
