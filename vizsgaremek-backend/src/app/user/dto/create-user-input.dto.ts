@@ -1,19 +1,18 @@
-// import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
-// TODO: class validator jó cucc?
+import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
 
 export class CreateUserInputDto {
-  //   @IsNotEmpty()
+  @IsNotEmpty()
   username: string;
 
-  //   @IsEmail()
+  @IsEmail()
   email: string;
 
-  //   @MinLength(6)
+  @MinLength(6)
   password: string;
 
-  //   @IsNotEmpty()
+  @IsNotEmpty()
   firstName: string;
 
-  //   @IsNotEmpty()
+  @IsNotEmpty()
   lastName: string;
 }

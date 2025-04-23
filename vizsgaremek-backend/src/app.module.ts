@@ -11,7 +11,6 @@ import { User } from './app/user/user.entity';
 import { Rating } from './app/rating/rating.entity';
 import { Like } from './app/like/like.entity';
 import { LikeModule } from './app/like/like.module';
-
 @Module({
   imports: [
     // Load environment variables from .env file globally
