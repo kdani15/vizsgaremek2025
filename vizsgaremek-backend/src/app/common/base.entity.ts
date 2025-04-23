@@ -1,8 +1,6 @@
 import {
   BeforeInsert,
   CreateDateColumn,
-  DeleteDateColumn,
-  Index,
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -16,10 +14,6 @@ export abstract class BaseEntity {
 
   @UpdateDateColumn({ default: () => 'CURRENT_TIMESTAMP', precision: 3 })
   updatedAt!: Date;
-
-  @DeleteDateColumn({ precision: 3, nullable: true })
-  @Index({ where: '"deleted_at" IS NULL' })
-  deletedAt!: Date;
 
   @BeforeInsert()
   async createId(): Promise<void> {
