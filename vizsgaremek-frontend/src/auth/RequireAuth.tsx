@@ -5,6 +5,7 @@ export const RequireAuth = () => {
   const location = useLocation();
 
   if (!token) {
+    console.log("NAVIGATE BACK");
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 

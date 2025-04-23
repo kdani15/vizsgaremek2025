@@ -18,10 +18,11 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Navigate to="/login" replace />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/movie/:id" element={<MovieDetails />} />
-            <Route path="/search" element={<Search />} />
-            <Route element={<RequireAuth />}></Route>
+            <Route element={<RequireAuth />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/movie/:id" element={<MovieDetails />} />
+              <Route path="/search" element={<Search />} />
+            </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

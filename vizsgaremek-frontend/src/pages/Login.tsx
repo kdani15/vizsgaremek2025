@@ -3,16 +3,19 @@ import { useNavigate } from "react-router-dom";
 import api from "../utils/api";
 
 export default function Login() {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async () => {
+    console.log(email, " - ", password);
     try {
-      const res = await api.post("/login", { username, password });
+      console.log("LOGIN CALLED");
+      const res = await api.post("/auth/login", { email, password });
+      console.log("LOGIN RES: ", res);
       localStorage.setItem("jwt", res.data.token);
-      navigate("/dashboard");
+      // navigate("/dashboard");
     } catch (err) {
       setError("Invalid login");
     }
@@ -46,11 +49,11 @@ export default function Login() {
                   id="email"
                   name="email"
                   type="email"
-                  value={username}
+                  value={email}
                   required
                   autoComplete="email"
                   className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  onChange={(e) => setUsername(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
             </div>
