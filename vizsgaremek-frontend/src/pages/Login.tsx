@@ -8,14 +8,15 @@ export default function Login() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
+  const handleLogin = async (e: any) => {
+    e.preventDefault();
     console.log(email, " - ", password);
     try {
       console.log("LOGIN CALLED");
-      const res = await api.post("/auth/login", { email, password });
+      const res = await api.post("/login", { email, password });
       console.log("LOGIN RES: ", res);
       localStorage.setItem("jwt", res.data.token);
-      // navigate("/dashboard");
+      navigate("/dashboard");
     } catch (err) {
       setError("Invalid login");
     }
@@ -36,7 +37,7 @@ export default function Login() {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form action="#" method="POST" className="space-y-6">
+          <form onSubmit={handleLogin} className="space-y-6">
             <div>
               <label
                 htmlFor="email"
@@ -91,7 +92,7 @@ export default function Login() {
 
             <div>
               <button
-                onClick={handleLogin}
+                type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign in

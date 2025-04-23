@@ -4,7 +4,7 @@ import { LocalAuthGuard } from './local-auth.guard';
 import { UserService } from '../user/user.service';
 import { CreateUserInputDto } from '../user/dto/create-user-input.dto';
 
-@Controller('auth')
+@Controller()
 export class AuthController {
   constructor(
     private authService: AuthService,
