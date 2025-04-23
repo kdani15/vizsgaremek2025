@@ -6,7 +6,6 @@ import {
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { nanoid } from 'nanoid';
 
 export abstract class BaseEntity {
   @PrimaryColumn('text')
@@ -23,9 +22,11 @@ export abstract class BaseEntity {
   deletedAt!: Date;
 
   @BeforeInsert()
-  createId(): void {
+  async createId(): Promise<void> {
     // generate id if not present
     if (this.id) return;
+
+    const { nanoid } = await import('nanoid');
     this.id = nanoid();
   }
 }
