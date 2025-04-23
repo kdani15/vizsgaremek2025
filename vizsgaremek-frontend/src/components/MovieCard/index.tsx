@@ -1,13 +1,23 @@
 type Props = {
+  id: string;
   title: string;
   thumb: string;
-  slug: string;
+  releaseYear: string;
+  seen: boolean;
+  onList: boolean;
 };
 
-export default function MovieCard({ title, thumb, slug }: Props) {
+export default function MovieCard({
+  id,
+  title,
+  thumb,
+  releaseYear,
+  seen,
+  onList,
+}: Props) {
   return (
     <a
-      href={`/${slug}`}
+      href={`/${id}`}
       style={{
         backgroundImage: `url(${thumb})`,
         textShadow: "0 1px 1px black",

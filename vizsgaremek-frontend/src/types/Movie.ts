@@ -1,5 +1,8 @@
 export type Movie = {
+  id: string;
   title: string;
   thumb: string;
-  slug: string;
+  releaseYear: string;
+  seen: boolean;
+  onList: boolean;
 };
