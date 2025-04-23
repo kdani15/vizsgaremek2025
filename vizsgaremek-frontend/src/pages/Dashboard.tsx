@@ -26,7 +26,7 @@ export const movies: Movie[] = [
   },
   {
     id: "03",
-    title: "kevésbé csúszós sziklák",
+    title: "Kevésbé csúszós sziklák",
     description:
       "Veszedelmes, csúszós sziklák okozzák ezrek halálát ezen a könyörtelen, Isten háta mögötti helyen.",
     thumbnailImg: "https://picsum.photos/id/16/200/100",
