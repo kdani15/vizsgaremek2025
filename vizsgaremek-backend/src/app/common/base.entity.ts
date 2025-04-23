@@ -4,6 +4,7 @@ import {
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { v4 as uuidv4 } from 'uuid';
 
 export abstract class BaseEntity {
   @PrimaryColumn('text')
@@ -16,11 +17,9 @@ export abstract class BaseEntity {
   updatedAt!: Date;
 
   @BeforeInsert()
-  async createId(): Promise<void> {
-    // generate id if not present
-    if (this.id) return;
-
-    const { nanoid } = await import('nanoid');
-    this.id = nanoid();
+  createId(): void {
+    if (!this.id) {
+      this.id = uuidv4(); // Generate a new UUID if not already set
+    }
   }
 }
