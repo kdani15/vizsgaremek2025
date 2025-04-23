@@ -1,7 +1,7 @@
 type Props = {
   id: string;
   title: string;
-  thumb: string;
+  thumbnailImg: string;
   releaseYear: string;
   seen: boolean;
   onList: boolean;
@@ -10,16 +10,16 @@ type Props = {
 export default function MovieCard({
   id,
   title,
-  thumb,
+  thumbnailImg,
   releaseYear,
   seen,
   onList,
 }: Props) {
   return (
     <a
-      href={`/${id}`}
+      href={`/movie/${id}`}
       style={{
-        backgroundImage: `url(${thumb})`,
+        backgroundImage: `url(${thumbnailImg})`,
         textShadow: "0 1px 1px black",
       }}
       className="bg-cover bg-center block h-64 rounded-lg shadow-md text-white p-4 font-semibold uppercase"

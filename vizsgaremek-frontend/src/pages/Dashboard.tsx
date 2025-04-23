@@ -5,7 +5,10 @@ export const movies: Movie[] = [
   {
     id: "01",
     title: "Csúszós sziklák",
-    thumb: "https://picsum.photos/id/14/200/100",
+    description:
+      "Veszedelmes, csúszós sziklák okozzák ezrek halálát ezen a könyörtelen, Isten háta mögötti helyen.",
+    thumbnailImg: "https://picsum.photos/id/14/200/100",
+    posterImg: "https://picsum.photos/id/14/1200/500",
     releaseYear: "2023",
     seen: false,
     onList: false,
@@ -13,7 +16,10 @@ export const movies: Movie[] = [
   {
     id: "02",
     title: "Csúszós sziklák 2",
-    thumb: "https://picsum.photos/id/15/200/100",
+    description:
+      "Veszedelmes, csúszós sziklák okozzák ezrek halálát ezen a könyörtelen, Isten háta mögötti helyen.",
+    thumbnailImg: "https://picsum.photos/id/15/200/100",
+    posterImg: "https://picsum.photos/id/15/1200/500",
     releaseYear: "2023",
     seen: false,
     onList: false,
@@ -21,7 +27,10 @@ export const movies: Movie[] = [
   {
     id: "03",
     title: "kevésbé csúszós sziklák",
-    thumb: "https://picsum.photos/id/16/200/100",
+    description:
+      "Veszedelmes, csúszós sziklák okozzák ezrek halálát ezen a könyörtelen, Isten háta mögötti helyen.",
+    thumbnailImg: "https://picsum.photos/id/16/200/100",
+    posterImg: "https://picsum.photos/id/16/1200/500",
     releaseYear: "2023",
     seen: false,
     onList: false,
@@ -29,7 +38,10 @@ export const movies: Movie[] = [
   {
     id: "04",
     title: "A láthatatlan úthenger",
-    thumb: "https://picsum.photos/id/17/200/100",
+    description:
+      "Mindent, és mindenkit kilapít, aki elé kerül. Amikor meghallod dübörgő hangját, már valószínűleg túl késő.",
+    thumbnailImg: "https://picsum.photos/id/17/200/100",
+    posterImg: "https://picsum.photos/id/17/1200/500",
     releaseYear: "2023",
     seen: false,
     onList: false,
@@ -37,8 +49,11 @@ export const movies: Movie[] = [
   {
     id: "05",
     title: "Susnyák titka",
-    thumb: "https://picsum.photos/id/18/200/100",
-    releaseYear: "/csuszossziklak",
+    description:
+      "Egy raszta jár a környéken, aki gondolkodás nélkül elszív minden susnyát ami az útjába kerül. A növények kifejlesztenek magukban egy anyagot, amely elszívás után a véráramba kerülve átveheti az agy feletti uralmat. Megkezdődik a raszták és a növények biológiai hadviselése.",
+    thumbnailImg: "https://picsum.photos/id/18/200/100",
+    posterImg: "https://picsum.photos/id/18/1200/500",
+    releaseYear: "2010",
     seen: false,
     onList: false,
   },
