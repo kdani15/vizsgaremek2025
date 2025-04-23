@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@nestjs/mapped-types": "*",
-    "nanoid": "^5.1.5"
-  }
-}
