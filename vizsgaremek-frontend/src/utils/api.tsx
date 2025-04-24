@@ -1,7 +1,10 @@
-import axios from "axios";
+import axios, { AxiosHeaders } from "axios";
+
+axios.defaults.headers.post["Content-Type"] =
+  "application/x-www-form-urlencoded";
 
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 api.interceptors.request.use((config) => {

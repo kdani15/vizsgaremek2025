@@ -3,15 +3,16 @@ import { useNavigate } from "react-router-dom";
 import api from "../utils/api";
 
 export default function Login() {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
+  const handleLogin = async (e: any) => {
+    e.preventDefault();
     try {
-      const res = await api.post("/login", { username, password });
-      localStorage.setItem("jwt", res.data.token);
+      const res = await api.post("/login", { email, password });
+      localStorage.setItem("jwt", res.data.access_token);
       navigate("/dashboard");
     } catch (err) {
       setError("Invalid login");
@@ -33,7 +34,7 @@ export default function Login() {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form action="#" method="POST" className="space-y-6">
+          <form onSubmit={handleLogin} className="space-y-6">
             <div>
               <label
                 htmlFor="email"
@@ -46,11 +47,11 @@ export default function Login() {
                   id="email"
                   name="email"
                   type="email"
-                  value={username}
+                  value={email}
                   required
                   autoComplete="email"
                   className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  onChange={(e) => setUsername(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
             </div>
@@ -88,7 +89,7 @@ export default function Login() {
 
             <div>
               <button
-                onClick={handleLogin}
+                type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign in
