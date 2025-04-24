@@ -5,7 +5,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Like, Repository } from 'typeorm';
+import { ILike, Repository } from 'typeorm';
 import { Movie } from './movie.entity';
 import { CreateMovieInputDto } from './dto/create-movie-input.dto';
 
@@ -64,7 +64,7 @@ export class MovieService {
   ): Promise<Movie[]> {
     try {
       return this.movieRepository.find({
-        where: { title: Like(`%${searchInput}%`) },
+        where: { title: ILike(`%${searchInput}%`) },
         skip: offset,
         take: limit,
         order: { createdAt: 'DESC' },
@@ -97,6 +97,8 @@ export class MovieService {
       throw new InternalServerErrorException('Failed to update movie');
     }
   }
+
+  // TODO: legújabb filmek rendezve
 
   async remove(id: string): Promise<void> {
     try {
