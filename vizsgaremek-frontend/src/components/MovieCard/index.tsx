@@ -1,8 +1,13 @@
 import { FolderMinusIcon } from "@heroicons/react/20/solid";
 import { FolderPlusIcon } from "@heroicons/react/24/outline";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  addToWatchlist,
+  getIsMovieOnWatchlist,
+  removeFromWatchlist,
+} from "../../utils/watchlistApi";
+import IconButton from "../IconButton";
 
 type Props = {
   id: string;
@@ -13,100 +18,55 @@ type Props = {
   onList: boolean;
 };
 
-export default function MovieCard({
-  id,
-  title,
-  thumbnailImg,
-  releaseYear,
-}: Props) {
+export default function MovieCard({ id, title, thumbnailImg }: Props) {
   const [error, setError] = useState("");
   const [isMovieIsOnWatchlist, setIsMovieIsOnWatchlist] =
     useState<boolean>(false);
 
   useEffect(() => {
-    checkIfMovieIsOnWatchlist(id);
+    if (id) {
+      checkIfMovieIsOnWatchlist(id);
+    }
   }, [id]);
 
   const checkIfMovieIsOnWatchlist = async (movieId: string) => {
     try {
-      const res = await axios.get(
-        `http://localhost:8000/watchlist/${movieId}`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-          },
-        }
-      );
-      setIsMovieIsOnWatchlist(res.data);
+      const isMovieOnWatchlist = await getIsMovieOnWatchlist(movieId);
+      setIsMovieIsOnWatchlist(isMovieOnWatchlist);
     } catch (err) {
       setError("Failed to fetch movies");
     }
   };
 
-  const removeFromWatchlist = async (
-    event: React.MouseEvent<SVGSVGElement>,
+  const handleRemoveFromWatchlist = async (
+    event: React.MouseEvent<HTMLButtonElement>,
     movieId: string
   ) => {
     event.stopPropagation();
     event.preventDefault();
-
-    const user = localStorage.getItem("user");
-
-    if (!user) {
-      return;
-    }
-
-    const userId = JSON.parse(user).id;
-
     try {
-      await axios.delete("http://localhost:8000/watchlist/remove", {
-        data: {
-          movieId,
-          userId,
-        },
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-        },
-      });
+      await removeFromWatchlist(movieId);
       setIsMovieIsOnWatchlist(false);
     } catch (err) {
       setError("Failed to fetch movies");
     }
   };
 
-  const addToWatchlist = async (
-    event: React.MouseEvent<SVGSVGElement>,
+  const handleAddToWatchlist = async (
+    event: React.MouseEvent<HTMLButtonElement>,
     movieId: string
   ) => {
     event.stopPropagation();
     event.preventDefault();
 
-    const user = localStorage.getItem("user");
-
-    if (!user) {
-      return;
-    }
-
-    const userId = JSON.parse(user).id;
-
     try {
-      await axios.post(
-        "http://localhost:8000/watchlist/add",
-        {
-          movieId,
-          userId,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-          },
-        }
-      );
+      addToWatchlist(movieId);
       setIsMovieIsOnWatchlist(true);
     } catch (err) {
       setError("Failed to fetch movies");
     }
   };
+
   return (
     <Link
       to={`/movie/${id}`}
@@ -118,19 +78,13 @@ export default function MovieCard({
     >
       <div className="flex justify-end opacity-60 hover:opacity-100 transition">
         {isMovieIsOnWatchlist ? (
-          <FolderMinusIcon
-            className="w-5 h-5"
-            onClick={(e: React.MouseEvent<SVGSVGElement>) =>
-              removeFromWatchlist(e, id)
-            }
-          />
+          <IconButton onClick={(event) => handleRemoveFromWatchlist(event, id)}>
+            <FolderMinusIcon className="w-5 h-5" />
+          </IconButton>
         ) : (
-          <FolderPlusIcon
-            className="w-5 h-5"
-            onClick={(e: React.MouseEvent<SVGSVGElement>) =>
-              addToWatchlist(e, id)
-            }
-          />
+          <IconButton onClick={(event) => handleAddToWatchlist(event, id)}>
+            <FolderPlusIcon className="w-5 h-5" />
+          </IconButton>
         )}
       </div>
       <span>{title}</span>

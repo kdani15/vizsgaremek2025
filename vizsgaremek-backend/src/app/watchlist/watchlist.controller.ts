@@ -6,11 +6,17 @@ import {
   Body,
   UseGuards,
   Delete,
+  Req,
 } from '@nestjs/common';
 import { WatchlistService } from './watchlist.service';
 import { LocalAuthGuard } from '../auth/local-auth.guard';
 import { AuthGuard } from '@nestjs/passport';
 import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
+import { Request } from 'express';
+
+interface AuthenticatedRequest extends Request {
+  user: { id: string; email?: string /* other user properties */ };
+}
 
 @Controller('watchlist')
 export class WatchlistController {
@@ -34,12 +40,13 @@ export class WatchlistController {
     return this.watchlistService.removeFromWatchlist(userId, movieId);
   }
 
-  @Get(':movieId')
   @UseGuards(JwtAuthGuard)
+  @Get(':movieId')
   async getIsMovieOnWatchlist(
     @Param('movieId') movieId: string,
-    @Param('userId') userId: string,
+    @Req() req: AuthenticatedRequest,
   ) {
+    const userId = req.user.id;
     return this.watchlistService.getIsMovieOnWatchlist(movieId, userId);
   }
 

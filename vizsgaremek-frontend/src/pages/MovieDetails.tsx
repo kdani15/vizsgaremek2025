@@ -2,11 +2,65 @@ import { useParams } from "react-router-dom";
 import { Movie } from "../types/Movie";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import {
+  addToWatchlist,
+  getIsMovieOnWatchlist,
+  removeFromWatchlist,
+} from "../utils/watchlistApi";
+import { FolderMinusIcon } from "@heroicons/react/20/solid";
+import { FolderPlusIcon } from "@heroicons/react/24/outline";
+import IconButton from "../components/IconButton";
 
 export default function MovieDetails() {
   const { id } = useParams<{ id: string }>();
   const [movie, setMovie] = useState<Movie>();
   const [error, setError] = useState("");
+  const [isMovieIsOnWatchlist, setIsMovieIsOnWatchlist] =
+    useState<boolean>(false);
+
+  const handleRemoveFromWatchlist = async (
+    event: React.MouseEvent<HTMLButtonElement>,
+    movieId: string
+  ) => {
+    event.stopPropagation();
+    event.preventDefault();
+    try {
+      await removeFromWatchlist(movieId);
+      setIsMovieIsOnWatchlist(false);
+    } catch (err) {
+      setError("Failed to fetch movies");
+    }
+  };
+
+  const handleAddToWatchlist = async (
+    event: React.MouseEvent<HTMLButtonElement>,
+    movieId: string
+  ) => {
+    event.stopPropagation();
+    event.preventDefault();
+
+    try {
+      addToWatchlist(movieId);
+      setIsMovieIsOnWatchlist(true);
+    } catch (err) {
+      setError("Failed to fetch movies");
+    }
+  };
+
+  const checkIfMovieIsOnWatchlist = async (movieId: string) => {
+    try {
+      const isMovieOnWatchlist = await getIsMovieOnWatchlist(movieId);
+      setIsMovieIsOnWatchlist(isMovieOnWatchlist);
+    } catch (err) {
+      setError("Failed to fetch movies");
+    }
+  };
+
+  useEffect(() => {
+    if (movie && movie.id) {
+      checkIfMovieIsOnWatchlist(movie.id);
+    }
+  }, [movie]);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -31,6 +85,21 @@ export default function MovieDetails() {
         className="relative h-[40vw] bg-cover bg-center"
         style={{ backgroundImage: `url(${movie.posterImg})` }}
       >
+        <div className="absolute top-[3rem] right-[1rem] ">
+          {isMovieIsOnWatchlist ? (
+            <IconButton
+              onClick={(event) => handleRemoveFromWatchlist(event, movie.id)}
+            >
+              <FolderMinusIcon className="w-5 h-5" />
+            </IconButton>
+          ) : (
+            <IconButton
+              onClick={(event) => handleAddToWatchlist(event, movie.id)}
+            >
+              <FolderPlusIcon className="w-5 h-5" />
+            </IconButton>
+          )}
+        </div>
         <div className="absolute left-[3rem] bottom-[1rem] ">
           <h1
             className="text-center text-3xl"
