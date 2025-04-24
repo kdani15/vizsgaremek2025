@@ -8,6 +8,7 @@ import { RequireAuth } from "./auth/RequireAuth";
 import Search from "./pages/Search";
 import MovieDetails from "./pages/MovieDetails";
 import Footer from "./components/Footer";
+import Watchlist from "./pages/Watchlist";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Navigate to="/login" replace />} />
             <Route element={<RequireAuth />}>
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/watchlist" element={<Watchlist />} />
               <Route path="/movie/:id" element={<MovieDetails />} />
               <Route path="/search" element={<Search />} />
             </Route>

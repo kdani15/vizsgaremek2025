@@ -14,8 +14,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 
 const navigation = [
   { name: "Movies", href: "/dashboard", current: true },
-  // { name: "Reviews", href: "#", current: false },
-  // { name: "Lists", href: "#", current: false },
+  { name: "Watchlist", href: "/watchlist", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -30,6 +29,7 @@ export default function Navbar() {
 
   const signOut = () => {
     localStorage.removeItem("jwt");
+    localStorage.removeItem("user");
     navigate("/login");
   };
 

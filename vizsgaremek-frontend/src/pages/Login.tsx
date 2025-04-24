@@ -13,6 +13,7 @@ export default function Login() {
     try {
       const res = await api.post("/login", { email, password });
       localStorage.setItem("jwt", res.data.access_token);
+      localStorage.setItem("user", JSON.stringify(res.data.user));
       navigate("/dashboard");
     } catch (err) {
       setError("Invalid login");

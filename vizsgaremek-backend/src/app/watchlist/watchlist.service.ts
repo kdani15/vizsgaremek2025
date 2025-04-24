@@ -83,4 +83,23 @@ export class WatchlistService {
       throw new InternalServerErrorException('Failed to retrieve watchlist');
     }
   }
+
+  async getIsMovieOnWatchlist(
+    movieId: string,
+    userId: string,
+  ): Promise<boolean> {
+    try {
+      const result = await this.watchlistRepository.findOne({
+        where: {
+          movie: { id: movieId },
+          user: { id: userId },
+        },
+      });
+
+      return !!result;
+    } catch (e) {
+      this.logger.error('Failed to retrieve watchlist', e.stack);
+      throw new InternalServerErrorException('Failed to retrieve watchlist');
+    }
+  }
 }
