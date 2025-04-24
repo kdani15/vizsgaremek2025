@@ -14,6 +14,8 @@ import { LikeModule } from './app/like/like.module';
 import { UserModule } from './app/user/user.module';
 import { Watchlist } from './app/watchlist/watchlist.entity';
 import { WatchlistModule } from './app/watchlist/watchlist.module';
+import { Seen } from './app/seen/seen.entity';
+import { SeenModule } from './app/seen/seen.module';
 
 @Module({
   imports: [
@@ -29,7 +31,7 @@ import { WatchlistModule } from './app/watchlist/watchlist.module';
       username: 'postgres',
       password: 'Test1234!',
       database: 'vizsgaremek',
-      entities: [Movie, User, Rating, Like, Watchlist], // TODO: rest of the entities
+      entities: [Movie, User, Rating, Like, Watchlist, Seen], // TODO: rest of the entities
       synchronize: true,
       autoLoadEntities: true,
     }),
@@ -39,6 +41,7 @@ import { WatchlistModule } from './app/watchlist/watchlist.module';
     LikeModule,
     UserModule,
     WatchlistModule,
+    SeenModule,
     // TODO: rest of the modules !!!
   ],
   controllers: [AppController],
