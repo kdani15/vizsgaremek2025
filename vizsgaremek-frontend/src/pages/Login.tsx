@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "../utils/api";
 
 export default function Login() {
@@ -64,14 +64,6 @@ export default function Login() {
                 >
                   Password
                 </label>
-                {/* <div className="text-sm">
-                  <a
-                    href="#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
-                  >
-                    Forgot password?
-                  </a>
-                </div> */}
               </div>
               <div className="mt-2">
                 <input
@@ -101,12 +93,12 @@ export default function Login() {
 
           <p className="mt-10 text-center text-sm/6 text-gray-500">
             Not a member?{" "}
-            <a
-              href="/register"
+            <Link
+              to="/register"
               className="font-semibold text-indigo-600 hover:text-indigo-500"
             >
               Sign up here
-            </a>
+            </Link>
           </p>
         </div>
       </div>

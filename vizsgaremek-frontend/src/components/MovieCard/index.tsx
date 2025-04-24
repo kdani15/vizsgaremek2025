@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type Props = {
   id: string;
   title: string;
@@ -14,8 +16,8 @@ export default function MovieCard({
   releaseYear,
 }: Props) {
   return (
-    <a
-      href={`/movie/${id}`}
+    <Link
+      to={`/movie/${id}`}
       style={{
         backgroundImage: `url(${thumbnailImg})`,
         textShadow: "0 1px 1px black",
@@ -23,6 +25,6 @@ export default function MovieCard({
       className="bg-cover bg-center flex items-end h-64 rounded-lg shadow-md text-white p-4 font-semibold uppercase opacity-90 hover:opacity-100 transition"
     >
       {title}
-    </a>
+    </Link>
   );
 }

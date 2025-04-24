@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import { Movie } from "../types/Movie";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -33,7 +34,7 @@ export default function Dashboard() {
     <div className="px-4 sm:px-6 lg:px-12">
       <div className="flex justify-between mt-10 mb-1">
         <h2>New movies:</h2>
-        <a href="/dashboard">All new</a>
+        <Link to="/dashboard">All new</Link>
       </div>
 
       {movies.length ? (
