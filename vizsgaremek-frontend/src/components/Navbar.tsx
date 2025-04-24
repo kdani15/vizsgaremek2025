@@ -13,9 +13,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 
 const navigation = [
-  { name: "Movies", href: "/", current: true },
-  { name: "Reviews", href: "#", current: false },
-  { name: "Lists", href: "#", current: false },
+  { name: "Movies", href: "/dashboard", current: true },
+  // { name: "Reviews", href: "#", current: false },
+  // { name: "Lists", href: "#", current: false },
 ];
 
 function classNames(...classes: string[]) {

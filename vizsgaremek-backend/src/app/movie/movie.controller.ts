@@ -25,6 +25,16 @@ export class MovieController {
     return this.movieService.create(createMovieInputDto);
   }
 
+  // Első 10 film keresése cím alapján
+  @Get('search')
+  async findByTitle(
+    @Query('title') title: string,
+    @Query('limit') limit: number = 10,
+    @Query('offset') offset: number = 0,
+  ): Promise<Movie[]> {
+    return this.movieService.findByTitle(title, limit, offset);
+  }
+
   // Legújabb 21 film lekérdezése a főoldalra
   @Get()
   async findAll(
@@ -38,16 +48,6 @@ export class MovieController {
   @Get(':id')
   async findById(@Param('id') id: string): Promise<Movie> {
     return this.movieService.findById(id);
-  }
-
-  // Első 10 film keresése cím alapján
-  @Get('search')
-  async findByTitle(
-    @Query('title') title: string,
-    @Query('limit') limit: number = 10,
-    @Query('offset') offset: number = 0,
-  ): Promise<Movie[]> {
-    return this.movieService.findByTitle(title, limit, offset);
   }
 
   // Film frissítése

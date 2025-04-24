@@ -1,10 +1,37 @@
 import { useLocation } from "react-router-dom";
-import { movies } from "./Dashboard";
 import MovieCard from "../components/MovieCard";
+import { Movie } from "../types/Movie";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Search() {
   const { state } = useLocation();
   const { term } = state;
+  const [movies, setMovies] = useState<Movie[]>([]);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const res = await axios.get("http://localhost:8000/movies/search", {
+          params: {
+            title: term,
+            limit: 21,
+            offset: 0,
+          },
+        });
+        setMovies(res.data);
+      } catch (err) {
+        setError("Failed to fetch movies");
+      }
+    };
+
+    fetchMovies();
+  }, [term]);
+
+  if (error) {
+    return <p style={{ color: "red" }}>{error}</p>;
+  }
 
   return (
     <div className="px-4 sm:px-6 lg:px-12">
@@ -13,7 +40,7 @@ export default function Search() {
       </h1>
 
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-        {movies.map((movie) => (
+        {movies.map((movie: Movie) => (
           <MovieCard key={movie.id} {...movie} />
         ))}
       </div>

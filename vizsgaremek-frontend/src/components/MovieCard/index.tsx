@@ -12,8 +12,6 @@ export default function MovieCard({
   title,
   thumbnailImg,
   releaseYear,
-  seen,
-  onList,
 }: Props) {
   return (
     <a
