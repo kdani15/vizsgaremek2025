@@ -17,7 +17,6 @@ import { UpdateMovieInputDto } from './dto/update-movie-input.dto';
 export class MovieController {
   constructor(private readonly movieService: MovieService) {}
 
-  // Film hozzáadása
   @Post()
   async create(
     @Body() createMovieInputDto: CreateMovieInputDto,
@@ -25,7 +24,6 @@ export class MovieController {
     return this.movieService.create(createMovieInputDto);
   }
 
-  // Első 10 film keresése cím alapján
   @Get('search')
   async findByTitle(
     @Query('title') title: string,
@@ -35,7 +33,6 @@ export class MovieController {
     return this.movieService.findByTitle(title, limit, offset);
   }
 
-  // Legújabb 21 film lekérdezése a főoldalra
   @Get()
   async findAll(
     @Query('limit') limit: number = 21,
@@ -44,13 +41,11 @@ export class MovieController {
     return this.movieService.findAll(limit, offset);
   }
 
-  // Film lekérdezése ID alapján
   @Get(':id')
   async findById(@Param('id') id: string): Promise<Movie> {
     return this.movieService.findById(id);
   }
 
-  // Film frissítése
   @Put(':id')
   async update(
     @Param('id') id: string,
@@ -59,7 +54,11 @@ export class MovieController {
     return this.movieService.update(id, movieUpdateInput);
   }
 
-  // Film törlése
+  @Get('latest')
+  async getLatestMovies(): Promise<Movie[]> {
+    return this.movieService.findLatestFromCurrentAndLastYear();
+  }
+
   @Delete(':id')
   async remove(@Param('id') id: string): Promise<void> {
     return this.movieService.remove(id);

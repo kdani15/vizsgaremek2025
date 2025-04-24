@@ -5,7 +5,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ILike, Repository } from 'typeorm';
+import { ILike, In, Repository } from 'typeorm';
 import { Movie } from './movie.entity';
 import { CreateMovieInputDto } from './dto/create-movie-input.dto';
 
@@ -98,7 +98,25 @@ export class MovieService {
     }
   }
 
-  // TODO: legújabb filmek rendezve
+  async findLatestFromCurrentAndLastYear(limit = 21): Promise<Movie[]> {
+    const currentYear = new Date().getFullYear();
+    const yearsToInclude = [currentYear, currentYear - 1];
+
+    try {
+      return await this.movieRepository.find({
+        where: {
+          releaseYear: In(yearsToInclude),
+        },
+        order: { releaseYear: 'DESC', createdAt: 'DESC' },
+        take: limit,
+      });
+    } catch (e) {
+      this.logger.error('Failed to retrieve recent movies', e.stack);
+      throw new InternalServerErrorException(
+        'Could not retrieve recent movies',
+      );
+    }
+  }
 
   async remove(id: string): Promise<void> {
     try {
