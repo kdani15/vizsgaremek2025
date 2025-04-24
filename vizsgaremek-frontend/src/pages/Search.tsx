@@ -39,11 +39,17 @@ export default function Search() {
         Show results for: <span className="font-bold">{term}</span>
       </h1>
 
-      <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-        {movies.map((movie: Movie) => (
-          <MovieCard key={movie.id} {...movie} />
-        ))}
-      </div>
+      {movies.length ? (
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
+          {movies.map((movie: Movie) => (
+            <MovieCard key={movie.id} {...movie} />
+          ))}
+        </div>
+      ) : (
+        <p className="text-center">
+          No results. Try to search for something else maybe.
+        </p>
+      )}
     </div>
   );
 }
