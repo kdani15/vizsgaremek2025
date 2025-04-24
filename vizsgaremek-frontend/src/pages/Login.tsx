@@ -10,12 +10,9 @@ export default function Login() {
 
   const handleLogin = async (e: any) => {
     e.preventDefault();
-    console.log(email, " - ", password);
     try {
-      console.log("LOGIN CALLED");
       const res = await api.post("/login", { email, password });
-      console.log("LOGIN RES: ", res);
-      localStorage.setItem("jwt", res.data.token);
+      localStorage.setItem("jwt", res.data.access_token);
       navigate("/dashboard");
     } catch (err) {
       setError("Invalid login");
