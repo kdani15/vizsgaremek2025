@@ -87,7 +87,13 @@ export default function Navbar() {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <div className="relative hidden sm:block sm:mr-4">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                doSearch();
+              }}
+              className="relative hidden sm:block sm:mr-4"
+            >
               <input
                 type="text"
                 value={searchQuery}
@@ -97,11 +103,11 @@ export default function Navbar() {
               />
               <button
                 className="hidden sm:block p-1 text-gray-400 hover:text-white absolute right-0 top-0 transition"
-                onClick={doSearch}
+                type="submit"
               >
                 <MagnifyingGlassIcon className="h-5 w-5" />
               </button>
-            </div>
+            </form>
 
             {/* Mobile search icon */}
             <button
