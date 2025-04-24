@@ -3,6 +3,7 @@ import { BaseEntity } from '../common/base.entity';
 import { Like } from '../like/like.entity';
 import { Rating } from '../rating/rating.entity';
 import { Watchlist } from '../watchlist/watchlist.entity';
+import { Seen } from '../seen/seen.entity';
 
 @Entity()
 export class User extends BaseEntity {
@@ -29,4 +30,7 @@ export class User extends BaseEntity {
 
   @OneToMany(() => Watchlist, (watchlist) => watchlist.user)
   watchlists: Watchlist[];
+
+  @OneToMany(() => Seen, (seen) => seen.user)
+  seenMovies: Seen[];
 }
