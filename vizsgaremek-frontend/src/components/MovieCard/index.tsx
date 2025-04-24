@@ -16,9 +16,15 @@ type Props = {
   releaseYear: string;
   seen: boolean;
   onList: boolean;
+  onRemove?: () => Promise<void>;
 };
 
-export default function MovieCard({ id, title, thumbnailImg }: Props) {
+export default function MovieCard({
+  id,
+  title,
+  thumbnailImg,
+  onRemove,
+}: Props) {
   const [error, setError] = useState("");
   const [isMovieIsOnWatchlist, setIsMovieIsOnWatchlist] =
     useState<boolean>(false);
@@ -47,6 +53,8 @@ export default function MovieCard({ id, title, thumbnailImg }: Props) {
     try {
       await removeFromWatchlist(movieId);
       setIsMovieIsOnWatchlist(false);
+
+      if (onRemove) onRemove();
     } catch (err) {
       setError("Failed to fetch movies");
     }

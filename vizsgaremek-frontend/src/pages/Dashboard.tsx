@@ -8,21 +8,21 @@ export default function Dashboard() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const res = await axios.get("http://localhost:8000/movies", {
-          params: {
-            limit: 21,
-            offset: 0,
-          },
-        });
-        setMovies(res.data);
-      } catch (err) {
-        setError("Failed to fetch movies");
-      }
-    };
+  const fetchMovies = async () => {
+    try {
+      const res = await axios.get("http://localhost:8000/movies", {
+        params: {
+          limit: 21,
+          offset: 0,
+        },
+      });
+      setMovies(res.data);
+    } catch (err) {
+      setError("Failed to fetch movies");
+    }
+  };
 
+  useEffect(() => {
     fetchMovies();
   }, []);
 

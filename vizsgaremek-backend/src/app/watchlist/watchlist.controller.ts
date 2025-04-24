@@ -9,7 +9,6 @@ import {
   Req,
 } from '@nestjs/common';
 import { WatchlistService } from './watchlist.service';
-import { LocalAuthGuard } from '../auth/local-auth.guard';
 import { AuthGuard } from '@nestjs/passport';
 import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
 import { Request } from 'express';
@@ -50,9 +49,10 @@ export class WatchlistController {
     return this.watchlistService.getIsMovieOnWatchlist(movieId, userId);
   }
 
-  @Get(':userId')
-  @UseGuards(LocalAuthGuard)
-  async getWatchlist(@Param('userId') userId: string) {
+  @UseGuards(JwtAuthGuard)
+  @Get()
+  async getWatchlist(@Req() req: AuthenticatedRequest) {
+    const userId = req.user.id;
     return this.watchlistService.getWatchlistByUser(userId);
   }
 }

@@ -3,11 +3,6 @@ import axios from "axios";
 export const getIsMovieOnWatchlist = async (
   movieId: string
 ): Promise<boolean> => {
-  console.log("Check watchilst");
-  const jwt = localStorage.getItem("jwt");
-  if (!jwt) {
-    console.log("JWT NOT WORKING OR EXPIRED");
-  }
   const res = await axios.get(`http://localhost:8000/watchlist/${movieId}`, {
     headers: {
       Authorization: `Bearer ${localStorage.getItem("jwt")}`,
