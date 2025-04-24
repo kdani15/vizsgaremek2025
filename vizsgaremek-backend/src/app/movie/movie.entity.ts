@@ -2,6 +2,7 @@ import { Entity, Column, OneToMany } from 'typeorm';
 import { BaseEntity } from '../common/base.entity';
 import { Like } from '../like/like.entity';
 import { Rating } from '../rating/rating.entity';
+import { Watchlist } from '../watchlist/watchlist.entity';
 
 @Entity()
 export class Movie extends BaseEntity {
@@ -25,4 +26,7 @@ export class Movie extends BaseEntity {
 
   @OneToMany(() => Like, (like) => like.movie)
   likes: Like[];
+
+  @OneToMany(() => Watchlist, (watchlist) => watchlist.movie)
+  watchlists: Watchlist[];
 }

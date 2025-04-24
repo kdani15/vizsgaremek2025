@@ -12,6 +12,9 @@ import { Rating } from './app/rating/rating.entity';
 import { Like } from './app/like/like.entity';
 import { LikeModule } from './app/like/like.module';
 import { UserModule } from './app/user/user.module';
+import { Watchlist } from './app/watchlist/watchlist.entity';
+import { WatchlistModule } from './app/watchlist/watchlist.module';
+
 @Module({
   imports: [
     // Load environment variables from .env file globally
@@ -26,7 +29,7 @@ import { UserModule } from './app/user/user.module';
       username: 'postgres',
       password: 'Test1234!',
       database: 'vizsgaremek',
-      entities: [Movie, User, Rating, Like], // TODO: rest of the entities
+      entities: [Movie, User, Rating, Like, Watchlist], // TODO: rest of the entities
       synchronize: true,
       autoLoadEntities: true,
     }),
@@ -35,6 +38,7 @@ import { UserModule } from './app/user/user.module';
     AuthModule,
     LikeModule,
     UserModule,
+    WatchlistModule,
     // TODO: rest of the modules !!!
   ],
   controllers: [AppController],
