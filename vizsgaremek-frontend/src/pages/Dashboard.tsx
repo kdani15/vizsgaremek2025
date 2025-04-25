@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import { Movie } from "../types/Movie";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import { fetchTMDBMovies } from "../utils/fetchTMDBMovies";
 
 export default function Dashboard() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -10,13 +10,8 @@ export default function Dashboard() {
 
   const fetchMovies = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/movies", {
-        params: {
-          limit: 21,
-          offset: 0,
-        },
-      });
-      setMovies(res.data);
+      const tmdbMovies: Movie[] | undefined = await fetchTMDBMovies();
+      setMovies(tmdbMovies || []);
     } catch (err) {
       setError("Failed to fetch movies");
     }

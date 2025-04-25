@@ -14,8 +14,6 @@ type Props = {
   title: string;
   thumbnailImg: string;
   releaseYear: string;
-  seen: boolean;
-  onList: boolean;
   onRemove?: () => Promise<void>;
 };
 
@@ -76,26 +74,35 @@ export default function MovieCard({
   };
 
   return (
-    <Link
-      to={`/movie/${id}`}
-      style={{
-        backgroundImage: `url(${thumbnailImg})`,
-        textShadow: "0 1px 1px black",
-      }}
-      className="bg-cover bg-center flex flex-col justify-between h-64 rounded-lg shadow-md text-white p-4 font-semibold uppercase opacity-90 hover:opacity-100 transition"
-    >
-      <div className="flex justify-end opacity-60 hover:opacity-100 transition">
-        {isMovieIsOnWatchlist ? (
-          <IconButton onClick={(event) => handleRemoveFromWatchlist(event, id)}>
-            <FolderMinusIcon className="w-5 h-5" />
-          </IconButton>
-        ) : (
-          <IconButton onClick={(event) => handleAddToWatchlist(event, id)}>
-            <FolderPlusIcon className="w-5 h-5" />
-          </IconButton>
-        )}
-      </div>
-      <span>{title}</span>
-    </Link>
+    <div className="w-[200px] h-[350px]">
+      <Link
+        to={`/movie/${id}`}
+        style={{
+          backgroundImage: `url(${thumbnailImg})`,
+          textShadow: "0 1px 1px black",
+        }}
+        className="block mb-1 w-[200px] h-[300px] bg-cover bg-center flex flex-col justify-between h-64 rounded-lg shadow-md text-white p-4 font-semibold uppercase opacity-90 hover:opacity-100 transition"
+      >
+        <div className="flex justify-end opacity-60 hover:opacity-100 transition">
+          {isMovieIsOnWatchlist ? (
+            <IconButton
+              onClick={(event) => handleRemoveFromWatchlist(event, id)}
+            >
+              <FolderMinusIcon className="w-5 h-5" />
+            </IconButton>
+          ) : (
+            <IconButton onClick={(event) => handleAddToWatchlist(event, id)}>
+              <FolderPlusIcon className="w-5 h-5" />
+            </IconButton>
+          )}
+        </div>
+      </Link>
+      <Link
+        to={`/movie/${id}`}
+        className="dark:text-gray-400 dark:hover:text-gray-200 transition"
+      >
+        {title}
+      </Link>
+    </div>
   );
 }
