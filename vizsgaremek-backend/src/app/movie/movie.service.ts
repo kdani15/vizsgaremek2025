@@ -18,13 +18,13 @@ export class MovieService {
     private movieRepository: Repository<Movie>,
   ) {}
 
-  async create(movie: CreateMovieInputDto): Promise<Movie> {
+  async create(createMovieDto: CreateMovieInputDto): Promise<Movie> {
     try {
-      const createMoviePayload = this.movieRepository.create({ ...movie });
-      return await this.movieRepository.save(createMoviePayload);
-    } catch (e) {
-      this.logger.error('Failed to create movie', e.stack);
-      throw new InternalServerErrorException('Failed to create movie'); // TODO: error codes ???
+      const movie = this.movieRepository.create(createMovieDto);
+      return await this.movieRepository.save(movie);
+    } catch (error) {
+      this.logger.error('Failed to create movie', error.stack);
+      throw new InternalServerErrorException();
     }
   }
 

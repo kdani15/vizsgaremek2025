@@ -1,8 +1,20 @@
+import { IsString, IsInt, IsOptional } from 'class-validator';
+
 export class CreateMovieInputDto {
+  @IsString()
   title: string;
-  year: number;
+
+  @IsInt()
+  releaseYear: number;
+
+  @IsString()
   description: string;
-  averageRating: number;
-  createdAt: Date;
-  updatedAt: Date;
+
+  @IsOptional()
+  @IsString()
+  posterImg?: string;
+
+  @IsOptional()
+  @IsString()
+  thumbnailImg?: string;
 }
