@@ -36,6 +36,14 @@ export class UserService {
     if (result.affected === 0) throw new NotFoundException('User not found');
   }
 
+  async getAllUser(): Promise<User[]> {
+    const users = await this.userRepository.find();
+    if (!users || users.length === 0) {
+      throw new NotFoundException('No users found');
+    }
+    return users;
+  }
+
   async getUserById(id: string): Promise<User> {
     const user = await this.userRepository.findOne({ where: { id } });
     if (!user) throw new NotFoundException('User not found');
