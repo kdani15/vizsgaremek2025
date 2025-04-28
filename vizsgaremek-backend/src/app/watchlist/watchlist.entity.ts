@@ -1,4 +1,4 @@
-import { Entity, ManyToOne } from 'typeorm';
+import { Entity, JoinColumn, ManyToOne } from 'typeorm';
 import { User } from '../user/user.entity';
 import { Movie } from '../movie/movie.entity';
 import { BaseEntity } from '../common/base.entity';
@@ -9,5 +9,6 @@ export class Watchlist extends BaseEntity {
   user: User;
 
   @ManyToOne(() => Movie, (movie) => movie.watchlists)
+  @JoinColumn({ name: 'movieId' })
   movie: Movie;
 }

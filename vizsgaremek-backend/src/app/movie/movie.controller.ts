@@ -7,11 +7,13 @@ import {
   Put,
   Delete,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 import { MovieService } from './movie.service';
 import { CreateMovieInputDto } from './dto/create-movie-input.dto';
 import { Movie } from './movie.entity';
 import { UpdateMovieInputDto } from './dto/update-movie-input.dto';
+import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
 
 @Controller('movies')
 export class MovieController {
@@ -62,5 +64,11 @@ export class MovieController {
   @Delete(':id')
   async remove(@Param('id') id: string): Promise<void> {
     return this.movieService.remove(id);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Delete()
+  async removeAll(): Promise<void> {
+    return this.movieService.removeAllMoviesAndWatchLists();
   }
 }

@@ -8,6 +8,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { ILike, In, Repository } from 'typeorm';
 import { Movie } from './movie.entity';
 import { CreateMovieInputDto } from './dto/create-movie-input.dto';
+import { Watchlist } from '../watchlist/watchlist.entity';
 
 @Injectable()
 export class MovieService {
@@ -16,6 +17,8 @@ export class MovieService {
   constructor(
     @InjectRepository(Movie)
     private movieRepository: Repository<Movie>,
+    @InjectRepository(Watchlist)
+    private watchlistRepository: Repository<Watchlist>,
   ) {}
 
   async create(createMovieDto: CreateMovieInputDto): Promise<Movie> {
@@ -127,6 +130,16 @@ export class MovieService {
     } catch (e) {
       this.logger.error('Failed to remove movie', e.stack);
       throw new InternalServerErrorException('Failed to remove movie');
+    }
+  }
+
+  async removeAllMoviesAndWatchLists(): Promise<void> {
+    try {
+      await this.watchlistRepository.delete({});
+      await this.movieRepository.delete({});
+    } catch (e) {
+      this.logger.error('Failed to remove movie', e.stack);
+      throw new InternalServerErrorException('Failed to remove movies');
     }
   }
 }

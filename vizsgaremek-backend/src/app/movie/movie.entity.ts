@@ -28,7 +28,9 @@ export class Movie extends BaseEntity {
   @OneToMany(() => Like, (like) => like.movie)
   likes: Like[];
 
-  @OneToMany(() => Watchlist, (watchlist) => watchlist.movie)
+  @OneToMany(() => Watchlist, (watchlist) => watchlist.movie, {
+    onDelete: 'CASCADE',
+  })
   watchlists: Watchlist[];
 
   @OneToMany(() => Seen, (seen) => seen.movie)
