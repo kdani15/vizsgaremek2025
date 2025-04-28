@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
 import { Movie } from "../types/Movie";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import api from "../utils/api";
 
 export default function Dashboard() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -10,7 +10,7 @@ export default function Dashboard() {
 
   const fetchMovies = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/movies", {
+      const res = await api.get("movies", {
         params: {
           limit: 21,
           offset: 0,
@@ -32,7 +32,7 @@ export default function Dashboard() {
 
   return (
     <div className="px-4 sm:px-6 lg:px-12">
-      <div className="flex justify-between mt-10 mb-1">
+      <div className="flex justify-between mt-10 mb-2">
         <h2>New movies:</h2>
         <Link to="/dashboard">All new</Link>
       </div>

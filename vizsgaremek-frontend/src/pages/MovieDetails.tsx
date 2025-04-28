@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Movie } from "../types/Movie";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import {
   addToWatchlist,
   getIsMovieOnWatchlist,
@@ -10,6 +9,7 @@ import {
 import { FolderMinusIcon } from "@heroicons/react/20/solid";
 import { FolderPlusIcon } from "@heroicons/react/24/outline";
 import IconButton from "../components/IconButton";
+import api from "../utils/api";
 
 export default function MovieDetails() {
   const { id } = useParams<{ id: string }>();
@@ -65,7 +65,7 @@ export default function MovieDetails() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/movies/${id}`);
+        const res = await api.get(`movies/${id}`);
         setMovie(res.data);
       } catch (err) {
         setError("Failed to fetch movies");

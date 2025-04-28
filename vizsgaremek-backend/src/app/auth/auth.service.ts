@@ -26,6 +26,34 @@ export class AuthService {
     return {
       user,
       access_token: res,
+      refreshToken: await this.jwtService.signAsync(payload, {
+        expiresIn: process.env.JWT_REFRESH_EXPIRES_IN,
+        secret: process.env.JWT_REFRESH_TOKEN_KEY,
+      }),
     };
+  }
+
+  async refreshToken(refreshToken: string) {
+    try {
+      const payload = await this.jwtService.verifyAsync(refreshToken, {
+        secret: process.env.JWT_REFRESH_TOKEN_KEY,
+      });
+
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { exp, iat, ...cleanPayload } = payload;
+
+      return {
+        accessToken: await this.jwtService.signAsync(cleanPayload, {
+          expiresIn: process.env.JWT_EXPIRES_IN,
+          secret: process.env.JWT_SECRET,
+        }),
+        refreshToken: await this.jwtService.signAsync(cleanPayload, {
+          expiresIn: process.env.JWT_REFRESH_EXPIRES_IN,
+          secret: process.env.JWT_REFRESH_TOKEN_KEY,
+        }),
+      };
+    } catch {
+      throw new UnauthorizedException('Invalid or expired refresh token');
+    }
   }
 }

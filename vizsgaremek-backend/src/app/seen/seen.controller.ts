@@ -8,7 +8,7 @@ import {
   Delete,
 } from '@nestjs/common';
 import { SeenService } from './seen.service';
-import { LocalAuthGuard } from '../auth/local-auth.guard';
+import { LocalAuthGuard } from '../auth/guards/local-auth.guard';
 
 @Controller('seen')
 export class SeenController {

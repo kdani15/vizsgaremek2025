@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
 import { Movie } from "../types/Movie";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../utils/api";
 
 export default function Search() {
   const { state } = useLocation();
@@ -13,7 +13,7 @@ export default function Search() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/movies/search", {
+        const res = await api.get("movies/search", {
           params: {
             title: term,
             limit: 21,

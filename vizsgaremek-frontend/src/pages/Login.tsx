@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import api from "../utils/api";
 
 export default function Login() {
@@ -28,6 +28,7 @@ export default function Login() {
         password: loginPassword,
       });
       localStorage.setItem("jwt", res.data.access_token);
+      localStorage.setItem("refresh_jwt", res.data.refreshToken);
       localStorage.setItem("user", JSON.stringify(res.data.user));
       navigate("/dashboard");
     } catch (err) {

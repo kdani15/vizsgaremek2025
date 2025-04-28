@@ -29,6 +29,7 @@ export default function Navbar() {
 
   const signOut = () => {
     localStorage.removeItem("jwt");
+    localStorage.removeItem("refresh_jwt");
     localStorage.removeItem("user");
     navigate("/login");
   };

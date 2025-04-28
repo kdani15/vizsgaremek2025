@@ -1,13 +1,9 @@
-import axios from "axios";
+import api from "./api";
 
 export const getIsMovieOnWatchlist = async (
   movieId: string
 ): Promise<boolean> => {
-  const res = await axios.get(`http://localhost:8000/watchlist/${movieId}`, {
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
-    },
-  });
+  const res = await api.get(`watchlist/${movieId}`);
   return res.data;
 };
 
@@ -20,8 +16,8 @@ export const addToWatchlist = async (movieId: string) => {
 
   const userId = JSON.parse(user).id;
 
-  await axios.post(
-    "http://localhost:8000/watchlist/add",
+  await api.post(
+    "watchlist/add",
     {
       movieId,
       userId,
@@ -43,7 +39,7 @@ export const removeFromWatchlist = async (movieId: string) => {
 
   const userId = JSON.parse(user).id;
 
-  await axios.delete("http://localhost:8000/watchlist/remove", {
+  await api.delete("watchlist/remove", {
     data: {
       movieId,
       userId,

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Movie } from "../types/Movie";
-import axios from "axios";
 import MovieCard from "../components/MovieCard";
+import api from "../utils/api";
 
 export default function Watchlist() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -9,13 +9,10 @@ export default function Watchlist() {
 
   const fetchMovies = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/watchlist", {
+      const res = await api.get("watchlist", {
         params: {
           limit: 21,
           offset: 0,
-        },
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
         },
       });
       setMovies(res.data.map((watchlist: any) => watchlist.movie));
