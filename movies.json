@@ -1,17 +1,10 @@
 [
   {
-    "title": "Inception",
-    "releaseYear": "2010",
-    "description": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
-    "posterImg": "https://image.tmdb.org/t/p/original/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg"
-  },
-  {
-    "title": "Interstellar",
-    "releaseYear": "2014",
-    "description": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
-    "posterImg": "https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+    "title": "Avatar",
+    "releaseYear": "2009",
+    "description": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+    "posterImg": "https://image.tmdb.org/t/p/original/kyeqWdyUXW608qlYkRqosgbbJyK.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/kyeqWdyUXW608qlYkRqosgbbJyK.jpg"
   },
   {
     "title": "The Dark Knight",
@@ -21,60 +14,18 @@
     "thumbnailImg": "https://image.tmdb.org/t/p/w200/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
   },
   {
-    "title": "The Shawshank Redemption",
-    "releaseYear": "1994",
-    "description": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
-    "posterImg": "https://image.tmdb.org/t/p/original/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"
+    "title": "Inception",
+    "releaseYear": "2010",
+    "description": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
+    "posterImg": "https://image.tmdb.org/t/p/original/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg"
   },
   {
-    "title": "Fight Club",
-    "releaseYear": "1999",
-    "description": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
-    "posterImg": "https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
-  },
-  {
-    "title": "The Matrix",
-    "releaseYear": "1999",
-    "description": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
-    "posterImg": "https://image.tmdb.org/t/p/original/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg"
-  },
-  {
-    "title": "Forrest Gump",
-    "releaseYear": "1994",
-    "description": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
-    "posterImg": "https://image.tmdb.org/t/p/original/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg"
-  },
-  {
-    "title": "Pulp Fiction",
-    "releaseYear": "1994",
-    "description": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
-    "posterImg": "https://image.tmdb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg"
-  },
-  {
-    "title": "The Godfather",
-    "releaseYear": "1972",
-    "description": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
-    "posterImg": "https://image.tmdb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
-  },
-  {
-    "title": "The Godfather Part II",
-    "releaseYear": "1974",
-    "description": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.",
-    "posterImg": "https://image.tmdb.org/t/p/original/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg"
-  },
-  {
-    "title": "The Lord of the Rings: The Fellowship of the Ring",
-    "releaseYear": "2001",
-    "description": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
-    "posterImg": "https://image.tmdb.org/t/p/original/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg"
+    "title": "The Lord of the Rings: The Return of the King",
+    "releaseYear": "2003",
+    "description": "As armies mass for a final battle that will decide the fate of the world--and powerful, ancient forces of Light and Dark compete to determine the outcome--one member of the Fellowship of the Ring is revealed as the noble heir to the throne of the Kings of Men. Yet, the sole hope for triumph over evil lies with a brave hobbit, Frodo, who, accompanied by his loyal friend Sam and the hideous, wretched Gollum, ventures deep into the very dark heart of Mordor on his seemingly impossible quest to destroy the Ring of Power.​",
+    "posterImg": "https://image.tmdb.org/t/p/original/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg"
   },
   {
     "title": "Gladiator",
@@ -84,46 +35,102 @@
     "thumbnailImg": "https://image.tmdb.org/t/p/w200/w0YjBWVfu689txEXZG3xa4Aev3i.jpg"
   },
   {
-    "title": "Mufasa: The Lion King",
-    "releaseYear": "2024",
-    "description": "Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of a group of misfits searching for their destiny.",
-    "posterImg": "https://image.tmdb.org/t/p/original/lurEK87kukWNaHd0zYnsi3yzJrs.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/lurEK87kukWNaHd0zYnsi3yzJrs.jpg"
-  },
-  {
-    "title": "Avengers: Endgame",
-    "releaseYear": "2019",
-    "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
-    "posterImg": "https://image.tmdb.org/t/p/original/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg"
-  },
-  {
-    "title": "Titanic",
-    "releaseYear": "1997",
-    "description": "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic, 84 years later. A young Rose boards the ship with her mother and fiancé. Meanwhile, Jack Dawson and Fabrizio De Rossi win third-class tickets aboard the ship. Rose tells the whole story from Titanic's departure through to its death—on its first and last voyage—on April 15, 1912.",
-    "posterImg": "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg"
-  },
-  {
-    "title": "Shutter Island",
-    "releaseYear": "2010",
-    "description": "World War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance of a patient from a hospital for the criminally insane, but his efforts are compromised by troubling visions and a mysterious doctor.",
-    "posterImg": "https://image.tmdb.org/t/p/original/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg"
-  },
-  {
-    "title": "The Prestige",
+    "title": "The Departed",
     "releaseYear": "2006",
-    "description": "A mysterious story of two magicians whose intense rivalry leads them on a life-long battle for supremacy -- full of obsession, deceit and jealousy with dangerous and deadly consequences.",
-    "posterImg": "https://image.tmdb.org/t/p/original/bdN3gXuIZYaJP7ftKK2sU0nPtEA.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/bdN3gXuIZYaJP7ftKK2sU0nPtEA.jpg"
+    "description": "To take down South Boston's Irish Mafia, the police send in one of their own to infiltrate the underworld, not realizing the syndicate has done likewise. While an undercover cop curries favor with the mob kingpin, a career criminal rises through the police ranks. But both sides soon discover there's a mole among them.",
+    "posterImg": "https://image.tmdb.org/t/p/original/nT97ifVT2J1yMQmeq20Qblg61T.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/nT97ifVT2J1yMQmeq20Qblg61T.jpg"
   },
   {
-    "title": "Joker",
-    "releaseYear": "2019",
-    "description": "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
-    "posterImg": "https://image.tmdb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
+    "title": "No Country for Old Men",
+    "releaseYear": "2007",
+    "description": "Llewelyn Moss stumbles upon dead bodies, $2 million and a hoard of heroin in a Texas desert, but methodical killer Anton Chigurh comes looking for it, with local sheriff Ed Tom Bell hot on his trail. The roles of prey and predator blur as the violent pursuit of money and justice collide.",
+    "posterImg": "https://image.tmdb.org/t/p/original/bj1v6YKF8yHqA489VFfnQvOJpnc.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/bj1v6YKF8yHqA489VFfnQvOJpnc.jpg"
+  },
+  {
+    "title": "Slumdog Millionaire",
+    "releaseYear": "2008",
+    "description": "A teenager reflects on his life after being accused of cheating on the Indian version of \"Who Wants to be a Millionaire?\".",
+    "posterImg": "https://image.tmdb.org/t/p/original/5leCCi7ZF0CawAfM5Qo2ECKPprc.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/5leCCi7ZF0CawAfM5Qo2ECKPprc.jpg"
+  },
+  {
+    "title": "The King's Speech",
+    "releaseYear": "2010",
+    "description": "The King's Speech tells the story of the man who became King George VI, the father of Queen Elizabeth II. After his brother abdicates, George ('Bertie') reluctantly assumes the throne. Plagued by a dreaded stutter and considered unfit to be king, Bertie engages the help of an unorthodox speech therapist named Lionel Logue. Through a set of unexpected techniques, and as a result of an unlikely friendship, Bertie is able to find his voice and boldly lead the country into war.",
+    "posterImg": "https://image.tmdb.org/t/p/original/pVNKXVQFukBaCz6ML7GH3kiPlQP.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/pVNKXVQFukBaCz6ML7GH3kiPlQP.jpg"
+  },
+  {
+    "title": "Black Swan",
+    "releaseYear": "2010",
+    "description": "The story of Nina, a ballerina in a New York City ballet company whose life, like all those in her profession, is completely consumed with dance. She lives with her retired ballerina mother Erica who zealously supports her daughter's professional ambition. When artistic director Thomas Leroy decides to replace prima ballerina Beth MacIntyre for the opening production of their new season, Swan Lake, Nina is his first choice.",
+    "posterImg": "https://image.tmdb.org/t/p/original/viWheBd44bouiLCHgNMvahLThqx.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/viWheBd44bouiLCHgNMvahLThqx.jpg"
+  },
+  {
+    "title": "The Social Network",
+    "releaseYear": "2010",
+    "description": "In 2003, Harvard undergrad and computer programmer Mark Zuckerberg begins work on a new concept that eventually turns into the global social network known as Facebook. Six years later, Mark is one of the youngest billionaires ever, but his unprecedented success leads to both personal and legal complications when he ends up on the receiving end of two lawsuits, one involving his former friend.",
+    "posterImg": "https://image.tmdb.org/t/p/original/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg"
+  },
+  {
+    "title": "The Artist",
+    "releaseYear": "2011",
+    "description": "Hollywood, 1927: As silent movie star George Valentin wonders if the arrival of talking pictures will cause him to fade into oblivion, he sparks with Peppy Miller, a young dancer set for a big break.",
+    "posterImg": "https://image.tmdb.org/t/p/original/z68py0ZqPgeacGPG54AGVRbNBS7.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/z68py0ZqPgeacGPG54AGVRbNBS7.jpg"
+  },
+  {
+    "title": "Argo",
+    "releaseYear": "2012",
+    "description": "As the Iranian revolution reaches a boiling point, a CIA 'exfiltration' specialist concocts a risky plan to free six Americans who have found shelter at the home of the Canadian ambassador.",
+    "posterImg": "https://image.tmdb.org/t/p/original/m5gPWFZFIp4UJFABgWyLkbXv8GX.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/m5gPWFZFIp4UJFABgWyLkbXv8GX.jpg"
+  },
+  {
+    "title": "12 Years a Slave",
+    "releaseYear": "2013",
+    "description": "In the pre-Civil War United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery. Facing cruelty as well as unexpected kindnesses Solomon struggles not only to stay alive, but to retain his dignity. In the twelfth year of his unforgettable odyssey, Solomon’s chance meeting with a Canadian abolitionist will forever alter his life.",
+    "posterImg": "https://image.tmdb.org/t/p/original/xdANQijuNrJaw1HA61rDccME4Tm.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/xdANQijuNrJaw1HA61rDccME4Tm.jpg"
+  },
+  {
+    "title": "Birdman",
+    "releaseYear": "2015",
+    "description": "A portrait of Robert, a troubled but poetic soul struggling with his purgatorial existence in a hackney scrapyard.",
+    "posterImg": "https://image.tmdb.org/t/p/original/9n0u3Ee7OUjgeyF5kIwahxkf4xm.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/9n0u3Ee7OUjgeyF5kIwahxkf4xm.jpg"
+  },
+  {
+    "title": "Spotlight",
+    "releaseYear": "2015",
+    "description": "The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core.",
+    "posterImg": "https://image.tmdb.org/t/p/original/8DPGG400FgaFWaqcv11n8mRd2NG.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/8DPGG400FgaFWaqcv11n8mRd2NG.jpg"
+  },
+  {
+    "title": "Moonlight",
+    "releaseYear": "2016",
+    "description": "The tender, heartbreaking story of a young man’s struggle to find himself, told across three defining chapters in his life as he experiences the ecstasy, pain, and beauty of falling in love, while grappling with his own sexuality.",
+    "posterImg": "https://image.tmdb.org/t/p/original/rcICfiL9fvwRjoWHxW8QeroLYrJ.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/rcICfiL9fvwRjoWHxW8QeroLYrJ.jpg"
+  },
+  {
+    "title": "The Shape of Water",
+    "releaseYear": "2017",
+    "description": "An other-worldly story, set against the backdrop of Cold War era America circa 1962, where a mute janitor working at a lab falls in love with an amphibious man being held captive there and devises a plan to help him escape.",
+    "posterImg": "https://image.tmdb.org/t/p/original/9zfwPffUXpBrEP26yp0q1ckXDcj.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/9zfwPffUXpBrEP26yp0q1ckXDcj.jpg"
+  },
+  {
+    "title": "Green Book",
+    "releaseYear": "2018",
+    "description": "Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.",
+    "posterImg": "https://image.tmdb.org/t/p/original/7BsvSuDQuoqhWmU2fL7W2GOcZHU.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/7BsvSuDQuoqhWmU2fL7W2GOcZHU.jpg"
   },
   {
     "title": "Parasite",
@@ -133,17 +140,605 @@
     "thumbnailImg": "https://image.tmdb.org/t/p/w200/4DGPORlVIDIQvsuSDnM4uXKMjWS.jpg"
   },
   {
-    "title": "Django Unchained",
-    "releaseYear": "2012",
-    "description": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
-    "posterImg": "https://image.tmdb.org/t/p/original/bV0rWoiRo7pHUTQkh6Oio6irlXO.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/bV0rWoiRo7pHUTQkh6Oio6irlXO.jpg"
+    "title": "Nomadland",
+    "releaseYear": "2021",
+    "description": "A woman in her sixties embarks on a journey through the western United States after losing everything in the Great Recession, living as a van-dwelling modern-day nomad.",
+    "posterImg": "https://image.tmdb.org/t/p/original/k5XzjWihzum1YgLMlqRDRZDmVMn.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/k5XzjWihzum1YgLMlqRDRZDmVMn.jpg"
   },
   {
-    "title": "Whiplash",
+    "title": "CODA",
+    "releaseYear": "2021",
+    "description": "As a CODA (Child of Deaf Adults), Ruby is the only hearing person in her deaf family. When the family's fishing business is threatened, Ruby finds herself torn between pursuing her love of music and her fear of abandoning her parents.",
+    "posterImg": "https://image.tmdb.org/t/p/original/BzVjmm8l23rPsijLiNLUzuQtyd.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/BzVjmm8l23rPsijLiNLUzuQtyd.jpg"
+  },
+  {
+    "title": "Everything Everywhere All at Once",
+    "releaseYear": "2022",
+    "description": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what's important to her by connecting with the lives she could have led in other universes.",
+    "posterImg": "https://image.tmdb.org/t/p/original/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/u68AjlvlutfEIcpmbYpKcdi09ut.jpg"
+  },
+  {
+    "title": "Oppenheimer",
+    "releaseYear": "2023",
+    "description": "The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.",
+    "posterImg": "https://image.tmdb.org/t/p/original/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+  },
+  {
+    "title": "Barbie",
+    "releaseYear": "2023",
+    "description": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.",
+    "posterImg": "https://image.tmdb.org/t/p/original/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg"
+  },
+  {
+    "title": "The Irishman",
+    "releaseYear": "2019",
+    "description": "Pennsylvania, 1956. Frank Sheeran, a war veteran of Irish origin who works as a truck driver, accidentally meets mobster Russell Bufalino. Once Frank becomes his trusted man, Bufalino sends him to Chicago with the task of helping Jimmy Hoffa, a powerful union leader related to organized crime, with whom Frank will maintain a close friendship for nearly twenty years.",
+    "posterImg": "https://image.tmdb.org/t/p/original/mbm8k3GFhXS0ROd9AD1gqYbIFbM.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/mbm8k3GFhXS0ROd9AD1gqYbIFbM.jpg"
+  },
+  {
+    "title": "Once Upon a Time... in Hollywood",
+    "releaseYear": "2019",
+    "description": "Los Angeles, 1969. TV star Rick Dalton, a struggling actor specializing in westerns, and stuntman Cliff Booth, his best friend, try to survive in a constantly changing movie industry. Dalton is the neighbor of the young and promising actress and model Sharon Tate, who has just married the prestigious Polish director Roman Polanski…",
+    "posterImg": "https://image.tmdb.org/t/p/original/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg"
+  },
+  {
+    "title": "1917",
+    "releaseYear": "2019",
+    "description": "At the height of the First World War, two young British soldiers must cross enemy territory and deliver a message that will stop a deadly attack on hundreds of soldiers.",
+    "posterImg": "https://image.tmdb.org/t/p/original/iZf0KyrE25z1sage4SYFLCCrMi9.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/iZf0KyrE25z1sage4SYFLCCrMi9.jpg"
+  },
+  {
+    "title": "Jojo Rabbit",
+    "releaseYear": "2019",
+    "description": "A World War II satire that follows a lonely German boy whose world view is turned upside down when he discovers his single mother is hiding a young Jewish girl in their attic. Aided only by his idiotic imaginary friend, Adolf Hitler, Jojo must confront his blind nationalism.",
+    "posterImg": "https://image.tmdb.org/t/p/original/7GsM4mtM0worCtIVeiQt28HieeN.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/7GsM4mtM0worCtIVeiQt28HieeN.jpg"
+  },
+  {
+    "title": "Ford v Ferrari",
+    "releaseYear": "2019",
+    "description": "American car designer Carroll Shelby and the British-born driver Ken Miles work together to battle corporate interference, the laws of physics, and their own personal demons to build a revolutionary race car for Ford Motor Company and take on the dominating race cars of Enzo Ferrari at the 24 Hours of Le Mans in France in 1966.",
+    "posterImg": "https://image.tmdb.org/t/p/original/dR1Ju50iudrOh3YgfwkAU1g2HZe.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/dR1Ju50iudrOh3YgfwkAU1g2HZe.jpg"
+  },
+  {
+    "title": "Joker",
+    "releaseYear": "2019",
+    "description": "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+    "posterImg": "https://image.tmdb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
+  },
+  {
+    "title": "Marriage Story",
+    "releaseYear": "2019",
+    "description": "A stage director and an actress struggle through a grueling, coast-to-coast divorce that pushes them to their personal extremes.",
+    "posterImg": "https://image.tmdb.org/t/p/original/2JRyCKaRKyJAVpsIHeLvPw5nHmw.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/2JRyCKaRKyJAVpsIHeLvPw5nHmw.jpg"
+  },
+  {
+    "title": "Little Women",
+    "releaseYear": "2019",
+    "description": "Four sisters come of age in America in the aftermath of the Civil War.",
+    "posterImg": "https://image.tmdb.org/t/p/original/yn5ihODtZ7ofn8pDYfxCmxh8AXI.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/yn5ihODtZ7ofn8pDYfxCmxh8AXI.jpg"
+  },
+  {
+    "title": "Knives Out",
+    "releaseYear": "2019",
+    "description": "When renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From Harlan's dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan's untimely death.",
+    "posterImg": "https://image.tmdb.org/t/p/original/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/pThyQovXQrw2m0s9x82twj48Jq4.jpg"
+  },
+  {
+    "title": "Soul",
+    "releaseYear": "2020",
+    "description": "Joe Gardner is a middle school teacher with a love for jazz music. After a successful audition at the Half Note Club, he suddenly gets into an accident that separates his soul from his body and is transported to the You Seminar, a center in which souls develop and gain passions before being transported to a newborn child. Joe must enlist help from the other souls-in-training, like 22, a soul who has spent eons in the You Seminar, in order to get back to Earth.",
+    "posterImg": "https://image.tmdb.org/t/p/original/pEz5aROvfy5FBW1OTlrDO3VryWO.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/pEz5aROvfy5FBW1OTlrDO3VryWO.jpg"
+  },
+  {
+    "title": "Tenet",
+    "releaseYear": "2020",
+    "description": "Armed with only one word - Tenet - and fighting for the survival of the entire world, the Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
+    "posterImg": "https://image.tmdb.org/t/p/original/aCIFMriQh8rvhxpN1IWGgvH0Tlg.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/aCIFMriQh8rvhxpN1IWGgvH0Tlg.jpg"
+  },
+  {
+    "title": "Dune",
+    "releaseYear": "2021",
+    "description": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
+    "posterImg": "https://image.tmdb.org/t/p/original/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"
+  },
+  {
+    "title": "The Power of the Dog",
+    "releaseYear": "2021",
+    "description": "A domineering but charismatic rancher wages a war of intimidation on his brother's new wife and her teen son, until long-hidden secrets come to light.",
+    "posterImg": "https://image.tmdb.org/t/p/original/kEy48iCzGnp0ao1cZbNeWR6yIhC.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/kEy48iCzGnp0ao1cZbNeWR6yIhC.jpg"
+  },
+  {
+    "title": "West Side Story",
+    "releaseYear": "2021",
+    "description": "Two youngsters from rival New York City gangs fall in love, but tensions between their respective friends build toward tragedy.",
+    "posterImg": "https://image.tmdb.org/t/p/original/yfz3IUoYYSY32tkb97HlUBGFsnh.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/yfz3IUoYYSY32tkb97HlUBGFsnh.jpg"
+  },
+  {
+    "title": "Licorice Pizza",
+    "releaseYear": "2021",
+    "description": "The story of Gary Valentine and Alana Kane growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.",
+    "posterImg": "https://image.tmdb.org/t/p/original/7F8v5IzhgZSfyTSXpIxXE8d1u8v.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/7F8v5IzhgZSfyTSXpIxXE8d1u8v.jpg"
+  },
+  {
+    "title": "Top Gun: Maverick",
+    "releaseYear": "2022",
+    "description": "After more than thirty years of service as one of the Navy’s top aviators, and dodging the advancement in rank that would ground him, Pete “Maverick” Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission the likes of which no living pilot has ever seen.",
+    "posterImg": "https://image.tmdb.org/t/p/original/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/62HCnUTziyWcpDaBO2i1DX17ljH.jpg"
+  },
+  {
+    "title": "The Batman",
+    "releaseYear": "2022",
+    "description": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
+    "posterImg": "https://image.tmdb.org/t/p/original/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/74xTEgt7R36Fpooo50r9T25onhq.jpg"
+  },
+  {
+    "title": "Elvis",
+    "releaseYear": "2022",
+    "description": "The life story of Elvis Presley as seen through the complicated relationship with his enigmatic manager, Colonel Tom Parker.",
+    "posterImg": "https://image.tmdb.org/t/p/original/qBOKWqAFbveZ4ryjJJwbie6tXkQ.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/qBOKWqAFbveZ4ryjJJwbie6tXkQ.jpg"
+  },
+  {
+    "title": "The Whale",
+    "releaseYear": "2022",
+    "description": "A reclusive English teacher suffering from severe obesity attempts to reconnect with his estranged teenage daughter for one last chance at redemption.",
+    "posterImg": "https://image.tmdb.org/t/p/original/jQ0gylJMxWSL490sy0RrPj1Lj7e.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/jQ0gylJMxWSL490sy0RrPj1Lj7e.jpg"
+  },
+  {
+    "title": "TÁR",
+    "releaseYear": "2022",
+    "description": "As celebrated conductor Lydia Tár starts rehearsals for a career-defining symphony, the consequences of her past choices begin to echo in the present.",
+    "posterImg": "https://image.tmdb.org/t/p/original/dRVAlaU0vbG6hMf2K45NSiIyoUe.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/dRVAlaU0vbG6hMf2K45NSiIyoUe.jpg"
+  },
+  {
+    "title": "Women Talking",
+    "releaseYear": "2022",
+    "description": "A group of women in an isolated religious colony struggle to reconcile their faith with a series of sexual assaults committed by the colony's men.",
+    "posterImg": "https://image.tmdb.org/t/p/original/wcTc9GveMMjAdHSlzdE0FaRCtqi.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/wcTc9GveMMjAdHSlzdE0FaRCtqi.jpg"
+  },
+  {
+    "title": "The Fabelmans",
+    "releaseYear": "2022",
+    "description": "Growing up in post-World War II era Arizona, young Sammy Fabelman aspires to become a filmmaker as he reaches adolescence, but soon discovers a shattering family secret and explores how the power of films can help him see the truth.",
+    "posterImg": "https://image.tmdb.org/t/p/original/h7llKkqkkJtJrTOaDLuVeUYDQ7I.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/h7llKkqkkJtJrTOaDLuVeUYDQ7I.jpg"
+  },
+  {
+    "title": "Triangle of Sadness",
+    "releaseYear": "2022",
+    "description": "A celebrity model couple are invited on a luxury cruise for the uber-rich, helmed by an unhinged, alcoholic captain. What first appears Instagrammable ends catastrophically, leaving the survivors stranded on a desert island in a struggle of hierarchy.",
+    "posterImg": "https://image.tmdb.org/t/p/original/k9eLozCgCed5FGTSdHu0bBElAV8.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/k9eLozCgCed5FGTSdHu0bBElAV8.jpg"
+  },
+  {
+    "title": "All Quiet on the Western Front",
+    "releaseYear": "2022",
+    "description": "Paul Baumer and his friends Albert and Muller, egged on by romantic dreams of heroism, voluntarily enlist in the German army. Full of excitement and patriotic fervour, the boys enthusiastically march into a war they believe in. But once on the Western Front, they discover the soul-destroying horror of World War I.",
+    "posterImg": "https://image.tmdb.org/t/p/original/2IRjbi9cADuDMKmHdLK7LaqQDKA.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/2IRjbi9cADuDMKmHdLK7LaqQDKA.jpg"
+  },
+  {
+    "title": "Everything Everywhere All at Once",
+    "releaseYear": "2022",
+    "description": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what's important to her by connecting with the lives she could have led in other universes.",
+    "posterImg": "https://image.tmdb.org/t/p/original/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/u68AjlvlutfEIcpmbYpKcdi09ut.jpg"
+  },
+  {
+    "title": "The Banshees of Inisherin",
+    "releaseYear": "2022",
+    "description": "Two lifelong friends find themselves at an impasse when one abruptly ends their relationship, with alarming consequences for both of them.",
+    "posterImg": "https://image.tmdb.org/t/p/original/4yFG6cSPaCaPhyJ1vtGOtMD1lgh.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/4yFG6cSPaCaPhyJ1vtGOtMD1lgh.jpg"
+  },
+  {
+    "title": "Avatar: The Way of Water",
+    "releaseYear": "2022",
+    "description": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+    "posterImg": "https://image.tmdb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg"
+  },
+  {
+    "title": "The Menu",
+    "releaseYear": "2022",
+    "description": "A young couple travels to a remote island to eat at an exclusive restaurant where the chef has prepared a lavish menu, with some shocking surprises.",
+    "posterImg": "https://image.tmdb.org/t/p/original/fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg"
+  },
+  {
+    "title": "Glass Onion: A Knives Out Mystery",
+    "releaseYear": "2022",
+    "description": "World-famous detective Benoit Blanc heads to Greece to peel back the layers of a mystery surrounding a tech billionaire and his eclectic crew of friends.",
+    "posterImg": "https://image.tmdb.org/t/p/original/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg"
+  },
+  {
+    "title": "Black Panther: Wakanda Forever",
+    "releaseYear": "2022",
+    "description": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+    "posterImg": "https://image.tmdb.org/t/p/original/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/sv1xJUazXeYqALzczSZ3O6nkH75.jpg"
+  },
+  {
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "releaseYear": "2022",
+    "description": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
+    "posterImg": "https://image.tmdb.org/t/p/original/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg"
+  },
+  {
+    "title": "Thor: Love and Thunder",
+    "releaseYear": "2022",
+    "description": "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.",
+    "posterImg": "https://image.tmdb.org/t/p/original/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg"
+  },
+  {
+    "title": "Ant-Man and the Wasp: Quantumania",
+    "releaseYear": "2023",
+    "description": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
+    "posterImg": "https://image.tmdb.org/t/p/original/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+  },
+  {
+    "title": "Guardians of the Galaxy Vol. 3",
+    "releaseYear": "2023",
+    "description": "Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.",
+    "posterImg": "https://image.tmdb.org/t/p/original/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg"
+  },
+  {
+    "title": "Spider-Man: No Way Home",
+    "releaseYear": "2021",
+    "description": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+    "posterImg": "https://image.tmdb.org/t/p/original/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+  },
+  {
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "releaseYear": "2021",
+    "description": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+    "posterImg": "https://image.tmdb.org/t/p/original/d08HqqeBQSwN8i8MEvpsZ8Cb438.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/d08HqqeBQSwN8i8MEvpsZ8Cb438.jpg"
+  },
+  {
+    "title": "Eternals",
+    "releaseYear": "2021",
+    "description": "The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants.",
+    "posterImg": "https://image.tmdb.org/t/p/original/lFByFSLV5WDJEv3KabbdAF959F2.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/lFByFSLV5WDJEv3KabbdAF959F2.jpg"
+  },
+  {
+    "title": "Black Widow",
+    "releaseYear": "2021",
+    "description": "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+    "posterImg": "https://image.tmdb.org/t/p/original/kwB7d51AIcyzPOBOHLCEZJkmPhQ.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/kwB7d51AIcyzPOBOHLCEZJkmPhQ.jpg"
+  },
+  {
+    "title": "The Suicide Squad",
+    "releaseYear": "2021",
+    "description": "Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.",
+    "posterImg": "https://image.tmdb.org/t/p/original/q61qEyssk2ku3okWICKArlAdhBn.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/q61qEyssk2ku3okWICKArlAdhBn.jpg"
+  },
+  {
+    "title": "Wonder Woman 1984",
+    "releaseYear": "2020",
+    "description": "A botched store robbery places Wonder Woman in a global battle against a powerful and mysterious ancient force that puts her powers in jeopardy.",
+    "posterImg": "https://image.tmdb.org/t/p/original/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
+  },
+  {
+    "title": "Zack Snyder's Justice League",
+    "releaseYear": "2021",
+    "description": "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+    "posterImg": "https://image.tmdb.org/t/p/original/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg"
+  },
+  {
+    "title": "The Flash",
+    "releaseYear": "2023",
+    "description": "When his attempt to save his family inadvertently alters the future, Barry Allen becomes trapped in a reality in which General Zod has returned and there are no Super Heroes to turn to. In order to save the world that he is in and return to the future that he knows, Barry's only hope is to race for his life. But will making the ultimate sacrifice be enough to reset the universe?",
+    "posterImg": "https://image.tmdb.org/t/p/original/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg"
+  },
+  {
+    "title": "Aquaman and the Lost Kingdom",
+    "releaseYear": "2023",
+    "description": "Black Manta seeks revenge on Aquaman for his father's death. Wielding the Black Trident's power, he becomes a formidable foe. To defend Atlantis, Arthur (Aquaman) forges an alliance with his imprisoned brother. They must protect the kingdom.",
+    "posterImg": "https://image.tmdb.org/t/p/original/oEyIhY1WzoFHUDE7U3p1AWwyoSN.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/oEyIhY1WzoFHUDE7U3p1AWwyoSN.jpg"
+  },
+  {
+    "title": "Shazam! Fury of the Gods",
+    "releaseYear": "2023",
+    "description": "Billy Batson and his foster siblings, who transform into superheroes by saying \"Shazam!\", are forced to get back into action and fight the Daughters of Atlas, who they must stop from using a weapon that could destroy the world.",
+    "posterImg": "https://image.tmdb.org/t/p/original/A3ZbZsmsvNGdprRi2lKgGEeVLEH.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/A3ZbZsmsvNGdprRi2lKgGEeVLEH.jpg"
+  },
+  {
+    "title": "The Marvels",
+    "releaseYear": "2023",
+    "description": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol’s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+    "posterImg": "https://image.tmdb.org/t/p/original/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg"
+  },
+  {
+    "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
+    "releaseYear": "2023",
+    "description": "64 years before he becomes the tyrannical president of Panem, Coriolanus Snow sees a chance for a change in fortunes when he mentors Lucy Gray Baird, the female tribute from District 12.",
+    "posterImg": "https://image.tmdb.org/t/p/original/lrkOYL5GBTFW9cgs9RlojxAcZZF.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/lrkOYL5GBTFW9cgs9RlojxAcZZF.jpg"
+  },
+  {
+    "title": "Dune: Part Two",
+    "releaseYear": "2024",
+    "description": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.",
+    "posterImg": "https://image.tmdb.org/t/p/original/6izwz7rsy95ARzTR3poZ8H6c5pp.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/6izwz7rsy95ARzTR3poZ8H6c5pp.jpg"
+  },
+  {
+    "title": "Mission: Impossible - Dead Reckoning Part One",
+    "releaseYear": "2023",
+    "description": "Ethan Hunt and his IMF team embark on their most dangerous mission yet: To track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands. With control of the future and the world's fate at stake and dark forces from Ethan's past closing in, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan must consider that nothing can matter more than his mission—not even the lives of those he cares about most.",
+    "posterImg": "https://image.tmdb.org/t/p/original/NNxYkU70HPurnNCSiCjYAmacwm.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/NNxYkU70HPurnNCSiCjYAmacwm.jpg"
+  },
+  {
+    "title": "John Wick: Chapter 4",
+    "releaseYear": "2023",
+    "description": "With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+    "posterImg": "https://image.tmdb.org/t/p/original/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg"
+  },
+  {
+    "title": "Fast X",
+    "releaseYear": "2023",
+    "description": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.",
+    "posterImg": "https://image.tmdb.org/t/p/original/fiVW06jE7z9YnO4trhaMEdclSiC.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/fiVW06jE7z9YnO4trhaMEdclSiC.jpg"
+  },
+  {
+    "title": "Indiana Jones and the Dial of Destiny",
+    "releaseYear": "2023",
+    "description": "Finding himself in a new era, and approaching retirement, Indy wrestles with fitting into a world that seems to have outgrown him. But as the tentacles of an all-too-familiar evil return in the form of an old rival, Indy must don his hat and pick up his whip once more to make sure an ancient and powerful artifact doesn't fall into the wrong hands.",
+    "posterImg": "https://image.tmdb.org/t/p/original/Af4bXE63pVsb2FtbW8uYIyPBadD.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/Af4bXE63pVsb2FtbW8uYIyPBadD.jpg"
+  },
+  {
+    "title": "Transformers: Rise of the Beasts",
+    "releaseYear": "2023",
+    "description": "When a new threat capable of destroying the entire planet emerges, Optimus Prime and the Autobots must team up with a powerful faction known as the Maximals. With the fate of humanity hanging in the balance, humans Noah and Elena will do whatever it takes to help the Transformers as they engage in the ultimate battle to save Earth.",
+    "posterImg": "https://image.tmdb.org/t/p/original/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/gPbM0MK8CP8A174rmUwGsADNYKD.jpg"
+  },
+  {
+    "title": "The Little Mermaid",
+    "releaseYear": "2018",
+    "description": "A young reporter and his niece discover a beautiful and enchanting creature they believe to be the real little mermaid.",
+    "posterImg": "https://image.tmdb.org/t/p/original/qEM80vqREgfjk7YhIbl4AgfZ47S.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/qEM80vqREgfjk7YhIbl4AgfZ47S.jpg"
+  },
+  {
+    "title": "Wonka",
+    "releaseYear": "2023",
+    "description": "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.",
+    "posterImg": "https://image.tmdb.org/t/p/original/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/qhb1qOilapbapxWQn9jtRCMwXJF.jpg"
+  },
+  {
+    "title": "Napoleon",
+    "releaseYear": "2023",
+    "description": "An epic that details the checkered rise and fall of French Emperor Napoleon Bonaparte and his relentless journey to power through the prism of his addictive, volatile relationship with his wife, Josephine.",
+    "posterImg": "https://image.tmdb.org/t/p/original/ytFOXyghxLzAM4KZyazDdEkM66q.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/ytFOXyghxLzAM4KZyazDdEkM66q.jpg"
+  },
+  {
+    "title": "Killers of the Flower Moon",
+    "releaseYear": "2023",
+    "description": "When oil is discovered in 1920s Oklahoma under Osage Nation land, the Osage people are murdered one by one—until the FBI steps in to unravel the mystery.",
+    "posterImg": "https://image.tmdb.org/t/p/original/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg"
+  },
+  {
+    "title": "Poor Things",
+    "releaseYear": "2023",
+    "description": "Brought back to life by an unorthodox scientist, a young woman runs off with a lawyer on a whirlwind adventure across the continents. Free from the prejudices of her times, she grows steadfast in her purpose to stand for equality and liberation.",
+    "posterImg": "https://image.tmdb.org/t/p/original/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg"
+  },
+  {
+    "title": "The Holdovers",
+    "releaseYear": "2023",
+    "description": "A curmudgeonly instructor at a New England prep school is forced to remain on campus during Christmas break to babysit the handful of students with nowhere to go. Eventually, he forms an unlikely bond with one of them — a damaged, brainy troublemaker — and with the school’s head cook, who has just lost a son in Vietnam.",
+    "posterImg": "https://image.tmdb.org/t/p/original/VHSzNBTwxV8vh7wylo7O9CLdac.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/VHSzNBTwxV8vh7wylo7O9CLdac.jpg"
+  },
+  {
+    "title": "Maestro",
     "releaseYear": "2014",
-    "description": "Under the direction of a ruthless instructor, a talented young drummer begins to pursue perfection at any cost, even his humanity.",
-    "posterImg": "https://image.tmdb.org/t/p/original/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
-    "thumbnailImg": "https://image.tmdb.org/t/p/w200/7fn624j5lj3xTme2SgiLCeuedmO.jpg"
+    "description": "Henry, a young actor, finds himself involved in a film by cinema superstar, Cédric Rovere. Charmed by his benevolence, feelings hitherto unknown are aroused, while Rovere, intrigued by Henry's dream, lives this shoot as an unexpected gift.",
+    "posterImg": "https://image.tmdb.org/t/p/original/mxMV3gVXXw9J2g3u4BRLKxF2AOe.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/mxMV3gVXXw9J2g3u4BRLKxF2AOe.jpg"
+  },
+  {
+    "title": "The Color Purple",
+    "releaseYear": "2023",
+    "description": "A decades-spanning tale of love and resilience and of one woman's journey to independence. Celie faces many hardships in her life, but ultimately finds extraordinary strength and hope in the unbreakable bonds of sisterhood.",
+    "posterImg": "https://image.tmdb.org/t/p/original/h5bqIxM8GO4TewJ0u6Rzkg58ssJ.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/h5bqIxM8GO4TewJ0u6Rzkg58ssJ.jpg"
+  },
+  {
+    "title": "Next Goal Wins",
+    "releaseYear": "2014",
+    "description": "An inspirational story about the power of hope in the face of seemingly insurmountable odds, and an object lesson in what it really means to be a winner in life.",
+    "posterImg": "https://image.tmdb.org/t/p/original/xJg8qEBBBc9OwvgkZXiA3hPtZCY.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/xJg8qEBBBc9OwvgkZXiA3hPtZCY.jpg"
+  },
+  {
+    "title": "The Killer",
+    "releaseYear": "2024",
+    "description": "Zee is a feared contract killer known as \"the Queen of the Dead,\" but when she refuses to murder a young blind woman, she finds herself hunted both by criminal colleagues and a determined police detective.",
+    "posterImg": "https://image.tmdb.org/t/p/original/6PCnxKZZIVRanWb710pNpYVkCSw.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/6PCnxKZZIVRanWb710pNpYVkCSw.jpg"
+  },
+  {
+    "title": "Saltburn",
+    "releaseYear": "2023",
+    "description": "Struggling to find his place at Oxford University, student Oliver Quick finds himself drawn into the world of the charming and aristocratic Felix Catton, who invites him to Saltburn, his eccentric family's sprawling estate, for a summer never to be forgotten.",
+    "posterImg": "https://image.tmdb.org/t/p/original/zGTfMwG112BC66mpaveVxoWPOaB.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/zGTfMwG112BC66mpaveVxoWPOaB.jpg"
+  },
+  {
+    "title": "The Creator",
+    "releaseYear": "2023",
+    "description": "Amid a future war between the human race and the forces of artificial intelligence, a hardened ex-special forces agent grieving the disappearance of his wife, is recruited to hunt down and kill the Creator, the elusive architect of advanced AI who has developed a mysterious weapon with the power to end the war—and mankind itself.",
+    "posterImg": "https://image.tmdb.org/t/p/original/3dSivDtOuyxLDxPH4v2tcNG1fP7.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/3dSivDtOuyxLDxPH4v2tcNG1fP7.jpg"
+  },
+  {
+    "title": "The Marvels",
+    "releaseYear": "2023",
+    "description": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol’s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+    "posterImg": "https://image.tmdb.org/t/p/original/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg"
+  },
+  {
+    "title": "Wish",
+    "releaseYear": "2023",
+    "description": "Asha, a sharp-witted idealist, makes a wish so powerful that it is answered by a cosmic force – a little ball of boundless energy called Star. Together, Asha and Star confront a most formidable foe - the ruler of Rosas, King Magnifico - to save her community and prove that when the will of one courageous human connects with the magic of the stars, wondrous things can happen.",
+    "posterImg": "https://image.tmdb.org/t/p/original/m9ckCVKU9vW3Dxc8hbodx7mjJbe.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/m9ckCVKU9vW3Dxc8hbodx7mjJbe.jpg"
+  },
+  {
+    "title": "Wish Dragon",
+    "releaseYear": "2021",
+    "description": "Determined teen Din is longing to reconnect with his childhood best friend when he meets a wish-granting dragon who shows him the magic of possibilities.",
+    "posterImg": "https://image.tmdb.org/t/p/original/lnPf6hzANL6pVQTxUlsNYSuhT5l.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/lnPf6hzANL6pVQTxUlsNYSuhT5l.jpg"
+  },
+  {
+    "title": "Raya and the Last Dragon",
+    "releaseYear": "2021",
+    "description": "Long ago, in the fantasy world of Kumandra, humans and dragons lived together in harmony. But when an evil force threatened the land, the dragons sacrificed themselves to save humanity. Now, 500 years later, that same evil has returned and it’s up to a lone warrior, Raya, to track down the legendary last dragon to restore the fractured land and its divided people.",
+    "posterImg": "https://image.tmdb.org/t/p/original/5nVhgCzxKbK47OLIKxCR1syulOn.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/5nVhgCzxKbK47OLIKxCR1syulOn.jpg"
+  },
+  {
+    "title": "Encanto",
+    "releaseYear": "2021",
+    "description": "The tale of an extraordinary family, the Madrigals, who live hidden in the mountains of Colombia, in a magical house, in a vibrant town, in a wondrous, charmed place called an Encanto. The magic of the Encanto has blessed every child in the family—every child except one, Mirabel. But when she discovers that the magic surrounding the Encanto is in danger, Mirabel decides that she, the only ordinary Madrigal, might just be her exceptional family's last hope.",
+    "posterImg": "https://image.tmdb.org/t/p/original/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg"
+  },
+  {
+    "title": "Turning Red",
+    "releaseYear": "2022",
+    "description": "Thirteen-year-old Mei is experiencing the awkwardness of being a teenager with a twist – when she gets too excited, she transforms into a giant red panda.",
+    "posterImg": "https://image.tmdb.org/t/p/original/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
+  },
+  {
+    "title": "Luca",
+    "releaseYear": "2021",
+    "description": "Luca and his best friend Alberto experience an unforgettable summer on the Italian Riviera. But all the fun is threatened by a deeply-held secret: they are sea monsters from another world just below the water’s surface.",
+    "posterImg": "https://image.tmdb.org/t/p/original/9x4i9uKGXt8IiiIF5Ey0DIoY738.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/9x4i9uKGXt8IiiIF5Ey0DIoY738.jpg"
+  },
+  {
+    "title": "Lightyear",
+    "releaseYear": "2022",
+    "description": "Legendary Space Ranger Buzz Lightyear embarks on an intergalactic adventure alongside a group of ambitious recruits and his robot companion Sox.",
+    "posterImg": "https://image.tmdb.org/t/p/original/b9t3w1loraDh7hjdWmpc9ZsaYns.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/b9t3w1loraDh7hjdWmpc9ZsaYns.jpg"
+  },
+  {
+    "title": "Elemental",
+    "releaseYear": "2023",
+    "description": "In a city where fire, water, land and air residents live together, a fiery young woman and a go-with-the-flow guy will discover something elemental: how much they have in common.",
+    "posterImg": "https://image.tmdb.org/t/p/original/4Y1WNkd88JXmGfhtWR7dmDAo1T2.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/4Y1WNkd88JXmGfhtWR7dmDAo1T2.jpg"
+  },
+  {
+    "title": "Strange World",
+    "releaseYear": "2022",
+    "description": "A journey deep into an uncharted and treacherous land, where fantastical creatures await the legendary Clades—a family of explorers whose differences threaten to topple their latest, and by far most crucial, mission.",
+    "posterImg": "https://image.tmdb.org/t/p/original/jXGMJUq9zcrScs02qkQuCtmWwaI.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/jXGMJUq9zcrScs02qkQuCtmWwaI.jpg"
+  },
+  {
+    "title": "Wish",
+    "releaseYear": "2023",
+    "description": "Asha, a sharp-witted idealist, makes a wish so powerful that it is answered by a cosmic force – a little ball of boundless energy called Star. Together, Asha and Star confront a most formidable foe - the ruler of Rosas, King Magnifico - to save her community and prove that when the will of one courageous human connects with the magic of the stars, wondrous things can happen.",
+    "posterImg": "https://image.tmdb.org/t/p/original/m9ckCVKU9vW3Dxc8hbodx7mjJbe.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/m9ckCVKU9vW3Dxc8hbodx7mjJbe.jpg"
+  },
+  {
+    "title": "Soul",
+    "releaseYear": "2020",
+    "description": "Joe Gardner is a middle school teacher with a love for jazz music. After a successful audition at the Half Note Club, he suddenly gets into an accident that separates his soul from his body and is transported to the You Seminar, a center in which souls develop and gain passions before being transported to a newborn child. Joe must enlist help from the other souls-in-training, like 22, a soul who has spent eons in the You Seminar, in order to get back to Earth.",
+    "posterImg": "https://image.tmdb.org/t/p/original/pEz5aROvfy5FBW1OTlrDO3VryWO.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/pEz5aROvfy5FBW1OTlrDO3VryWO.jpg"
+  },
+  {
+    "title": "Onward",
+    "releaseYear": "2020",
+    "description": "In a suburban fantasy world, two teenage elf brothers embark on an extraordinary quest to discover if there is still a little magic left out there.",
+    "posterImg": "https://image.tmdb.org/t/p/original/f4aul3FyD3jv3v4bul1IrkWZvzq.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/f4aul3FyD3jv3v4bul1IrkWZvzq.jpg"
+  },
+  {
+    "title": "Frozen II",
+    "releaseYear": "2019",
+    "description": "Elsa, Anna, Kristoff and Olaf head far into the forest to learn the truth about an ancient mystery of their kingdom.",
+    "posterImg": "https://image.tmdb.org/t/p/original/mINJaa34MtknCYl5AjtNJzWj8cD.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/mINJaa34MtknCYl5AjtNJzWj8cD.jpg"
+  },
+  {
+    "title": "Toy Story 4",
+    "releaseYear": "2019",
+    "description": "Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that's Andy or Bonnie. But when Bonnie adds a reluctant new toy called \"Forky\" to her room, a road trip adventure alongside old and new friends will show Woody how big the world can be for a toy.",
+    "posterImg": "https://image.tmdb.org/t/p/original/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg"
+  },
+  {
+    "title": "Coco",
+    "releaseYear": "2017",
+    "description": "Despite his family’s baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. Along the way, he meets charming trickster Hector, and together, they set off on an extraordinary journey to unlock the real story behind Miguel's family history.",
+    "posterImg": "https://image.tmdb.org/t/p/original/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg"
+  },
+  {
+    "title": "Moana",
+    "releaseYear": "2009",
+    "description": "The life story of Italian iconic pornographic actress Moana Pozzi. The actress Ilona Staller sued the production of the film for the unauthorized use of the character \"Cicciolina\", of which she owned the rights.",
+    "posterImg": "https://image.tmdb.org/t/p/original/nEDFaNVqmLl2UeUYvvkKDSge5Ed.jpg",
+    "thumbnailImg": "https://image.tmdb.org/t/p/w200/nEDFaNVqmLl2UeUYvvkKDSge5Ed.jpg"
   }
 ]
