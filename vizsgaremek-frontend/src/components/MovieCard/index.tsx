@@ -24,6 +24,7 @@ export default function MovieCard({
   title,
   thumbnailImg,
   onRemove,
+  releaseYear,
 }: Props) {
   const [error, setError] = useState("");
   const [isMovieIsOnWatchlist, setIsMovieIsOnWatchlist] =
@@ -76,26 +77,37 @@ export default function MovieCard({
   };
 
   return (
-    <Link
-      to={`/movie/${id}`}
-      style={{
-        backgroundImage: `url(${thumbnailImg})`,
-        textShadow: "0 1px 1px black",
-      }}
-      className="bg-cover bg-center flex flex-col justify-between h-64 rounded-lg shadow-md text-white p-4 font-semibold uppercase opacity-90 hover:opacity-100 transition"
-    >
-      <div className="flex justify-end opacity-60 hover:opacity-100 transition">
-        {isMovieIsOnWatchlist ? (
-          <IconButton onClick={(event) => handleRemoveFromWatchlist(event, id)}>
-            <FolderMinusIcon className="w-5 h-5" />
-          </IconButton>
-        ) : (
-          <IconButton onClick={(event) => handleAddToWatchlist(event, id)}>
-            <FolderPlusIcon className="w-5 h-5" />
-          </IconButton>
-        )}
+    <div>
+      <Link
+        to={`/movie/${id}`}
+        style={{
+          backgroundImage: `url(${thumbnailImg})`,
+          textShadow: "0 1px 1px black",
+        }}
+        className="w-full h-[0] pb-[150%] bg-cover bg-center flex flex-col justify-between h-64 rounded-lg shadow-md text-white p-4 font-semibold uppercase opacity-90 hover:opacity-100 transition"
+      >
+        <div className="flex justify-end opacity-60 hover:opacity-100 transition">
+          {isMovieIsOnWatchlist ? (
+            <IconButton
+              onClick={(event) => handleRemoveFromWatchlist(event, id)}
+            >
+              <FolderMinusIcon className="w-5 h-5" />
+            </IconButton>
+          ) : (
+            <IconButton onClick={(event) => handleAddToWatchlist(event, id)}>
+              <FolderPlusIcon className="w-5 h-5" />
+            </IconButton>
+          )}
+        </div>
+      </Link>
+      <div className="py-3">
+        <Link
+          to={`/movie/${id}`}
+          className="text-gray-400 hover:text-gray-300 transition"
+        >
+          {title} ({releaseYear})
+        </Link>
       </div>
-      <span>{title}</span>
-    </Link>
+    </div>
   );
 }
