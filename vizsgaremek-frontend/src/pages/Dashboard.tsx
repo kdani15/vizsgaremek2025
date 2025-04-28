@@ -3,16 +3,32 @@ import MovieCard from "../components/MovieCard";
 import { Movie } from "../types/Movie";
 import { Link } from "react-router-dom";
 import api from "../utils/api";
+import { getMoviesFetchAmount } from "../utils/getMoviesFetchAmount";
 
 export default function Dashboard() {
+  const [newMovies, setNewMovies] = useState<Movie[]>([]);
   const [movies, setMovies] = useState<Movie[]>([]);
   const [error, setError] = useState("");
+
+  const fetchNewMovies = async () => {
+    try {
+      const res = await api.get("movies/latest", {
+        params: {
+          limit: getMoviesFetchAmount() / 2,
+          offset: 0,
+        },
+      });
+      setNewMovies(res.data);
+    } catch (err) {
+      setError("Failed to fetch movies");
+    }
+  };
 
   const fetchMovies = async () => {
     try {
       const res = await api.get("movies", {
         params: {
-          limit: 21,
+          limit: getMoviesFetchAmount(),
           offset: 0,
         },
       });
@@ -23,18 +39,30 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
+    fetchNewMovies();
     fetchMovies();
   }, []);
-
-  if (error) {
-    return <p style={{ color: "red" }}>{error}</p>;
-  }
 
   return (
     <div className="px-4 sm:px-6 lg:px-12">
       <div className="flex justify-between mt-10 mb-2">
         <h2>New movies:</h2>
         <Link to="/dashboard">All new</Link>
+      </div>
+
+      {movies.length ? (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+          {newMovies.map((movie) => (
+            <MovieCard key={movie.id} {...movie} />
+          ))}
+        </div>
+      ) : (
+        <p>We could not find any movies.</p>
+      )}
+
+      <div className="flex justify-between mt-10 mb-2">
+        <h2>Other movies:</h2>
+        <Link to="/dashboard">All other</Link>
       </div>
 
       {movies.length ? (

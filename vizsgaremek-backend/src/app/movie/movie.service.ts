@@ -5,7 +5,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ILike, In, Repository } from 'typeorm';
+import { ILike, MoreThanOrEqual, Repository } from 'typeorm';
 import { Movie } from './movie.entity';
 import { CreateMovieInputDto } from './dto/create-movie-input.dto';
 import { Watchlist } from '../watchlist/watchlist.entity';
@@ -101,14 +101,17 @@ export class MovieService {
     }
   }
 
-  async findLatestFromCurrentAndLastYear(limit = 21): Promise<Movie[]> {
+  async findLatestFromCurrentAndLastYear(
+    limit = 21,
+    offset = 0,
+  ): Promise<Movie[]> {
     const currentYear = new Date().getFullYear();
-    const yearsToInclude = [currentYear, currentYear - 1];
 
     try {
       return await this.movieRepository.find({
+        skip: offset,
         where: {
-          releaseYear: In(yearsToInclude),
+          releaseYear: MoreThanOrEqual(currentYear - 2),
         },
         order: { releaseYear: 'DESC', createdAt: 'DESC' },
         take: limit,

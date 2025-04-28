@@ -26,6 +26,14 @@ export class MovieController {
     return this.movieService.create(createMovieInputDto);
   }
 
+  @Get('latest')
+  async getLatestMovies(
+    @Query('limit') limit: number = 21,
+    @Query('offset') offset: number = 0,
+  ): Promise<Movie[]> {
+    return this.movieService.findLatestFromCurrentAndLastYear(limit, offset);
+  }
+
   @Get('search')
   async findByTitle(
     @Query('title') title: string,
@@ -54,11 +62,6 @@ export class MovieController {
     @Body() movieUpdateInput: Partial<UpdateMovieInputDto>,
   ): Promise<Movie> {
     return this.movieService.update(id, movieUpdateInput);
-  }
-
-  @Get('latest')
-  async getLatestMovies(): Promise<Movie[]> {
-    return this.movieService.findLatestFromCurrentAndLastYear();
   }
 
   @Delete(':id')
