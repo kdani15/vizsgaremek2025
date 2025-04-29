@@ -9,6 +9,7 @@ import { ILike, MoreThanOrEqual, Repository } from 'typeorm';
 import { Movie } from './movie.entity';
 import { CreateMovieInputDto } from './dto/create-movie-input.dto';
 import { Watchlist } from '../watchlist/watchlist.entity';
+import { Seen } from '../seen/seen.entity';
 
 @Injectable()
 export class MovieService {
@@ -19,6 +20,8 @@ export class MovieService {
     private movieRepository: Repository<Movie>,
     @InjectRepository(Watchlist)
     private watchlistRepository: Repository<Watchlist>,
+    @InjectRepository(Seen)
+    private seenRepository: Repository<Seen>,
   ) {}
 
   async create(createMovieDto: CreateMovieInputDto): Promise<Movie> {
@@ -139,6 +142,7 @@ export class MovieService {
   async removeAllMoviesAndWatchLists(): Promise<void> {
     try {
       await this.watchlistRepository.delete({});
+      await this.seenRepository.delete({});
       await this.movieRepository.delete({});
     } catch (e) {
       this.logger.error('Failed to remove movie', e.stack);
