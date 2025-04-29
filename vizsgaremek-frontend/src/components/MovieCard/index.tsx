@@ -72,6 +72,8 @@ export default function MovieCard({
     try {
       await removeFromSeenlist(movieId);
       setIsSeen(false);
+
+      if (onRemove) onRemove();
     } catch (err) {
       console.log("Failed to fetch movies", err);
     }
