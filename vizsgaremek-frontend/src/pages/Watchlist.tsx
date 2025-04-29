@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import { Movie } from "../types/Movie";
 import MovieCard from "../components/MovieCard";
 import api from "../utils/api";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function Watchlist() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const fetchMovies = async () => {
+    setIsLoading(true);
     try {
       const res = await api.get("watchlist", {
         params: {
@@ -18,6 +21,8 @@ export default function Watchlist() {
       setMovies(res.data.map((watchlist: any) => watchlist.movie));
     } catch (err) {
       setError("Failed to fetch movies");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -25,7 +30,9 @@ export default function Watchlist() {
     fetchMovies();
   }, []);
 
-  return (
+  return isLoading ? (
+    <LoadingSpinner />
+  ) : (
     <div className="px-4 sm:px-6 lg:px-12">
       <h1 className="mt-10 text-center text-3xl mb-10">Watchlist</h1>
 

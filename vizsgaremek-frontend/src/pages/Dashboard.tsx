@@ -4,11 +4,19 @@ import { Movie } from "../types/Movie";
 import { Link } from "react-router-dom";
 import api from "../utils/api";
 import { getMoviesFetchAmount } from "../utils/getMoviesFetchAmount";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function Dashboard() {
   const [newMovies, setNewMovies] = useState<Movie[]>([]);
   const [movies, setMovies] = useState<Movie[]>([]);
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (movies && movies.length && newMovies && newMovies.length) {
+      setIsLoading(false);
+    }
+  }, [movies, newMovies, setIsLoading]);
 
   const fetchNewMovies = async () => {
     try {
@@ -39,12 +47,15 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
+    setIsLoading(true);
     fetchNewMovies();
     fetchMovies();
-  }, []);
+  }, [setIsLoading]);
 
-  return (
-    <div className="px-4 sm:px-6 lg:px-12">
+  return isLoading ? (
+    <LoadingSpinner />
+  ) : (
+    <div className="px-4 sm:px-6 lg:px-12 fadeIn">
       <div className="flex justify-between mt-10 mb-2">
         <h2>New movies:</h2>
         <Link to="/dashboard">All new</Link>

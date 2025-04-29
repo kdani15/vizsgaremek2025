@@ -11,3 +11,17 @@
     @apply bg-gray-900 text-white;
   }
 }
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

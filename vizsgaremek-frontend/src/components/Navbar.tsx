@@ -29,14 +29,19 @@ export default function Navbar() {
   const [monogram, setMonogram] = useState<string>();
 
   useEffect(() => {
+    if (location.pathname === "/login") {
+      return;
+    }
+
     const storedUser = localStorage.getItem("user");
+
     if (storedUser) {
       const user = JSON.parse(storedUser);
       const first = user.firstName.charAt(0);
       const last = user.lastName.charAt(0);
       setMonogram(`${first}${last}`);
     }
-  }, []);
+  }, [location]);
 
   const signOut = () => {
     localStorage.removeItem("jwt");

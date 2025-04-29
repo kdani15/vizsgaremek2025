@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../utils/api";
+import ButtonLoadingSpinner from "../components/ButtonLoadingSpinner";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -13,12 +14,15 @@ export default function Login() {
   const [error, setError] = useState("");
   const [regError, setRegError] = useState("");
   const navigate = useNavigate();
+  const [isLoginLoading, setIsLoginLoading] = useState<boolean>(false);
+  const [isRegLoading, setIsRegLoading] = useState<boolean>(false);
 
   const handleLogin = async (
     e?: any,
     regEmail?: string,
     regPassword?: string
   ) => {
+    setIsLoginLoading(true);
     e && e.preventDefault();
     const loginEmail = regEmail ? regEmail : email;
     const loginPassword = regPassword ? regPassword : password;
@@ -33,6 +37,8 @@ export default function Login() {
       navigate("/dashboard");
     } catch (err) {
       setError("Invalid login");
+    } finally {
+      setIsLoginLoading(false);
     }
   };
 
@@ -45,6 +51,7 @@ export default function Login() {
   };
 
   const handleSignup = async (e: any) => {
+    setIsRegLoading(true);
     e.preventDefault();
     try {
       await api.post("/users", {
@@ -58,6 +65,8 @@ export default function Login() {
       handleLogin(null, regEmail, regPassword);
     } catch (err) {
       setError("Invalid login");
+    } finally {
+      setIsRegLoading(false);
     }
   };
 
@@ -125,8 +134,10 @@ export default function Login() {
               <div className="mt-3">
                 <button
                   type="submit"
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  disabled={isLoginLoading}
+                  className="flex w-full justify-center items-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:disabled:bg-gray-300"
                 >
+                  {isLoginLoading && <ButtonLoadingSpinner />}
                   Sign in
                 </button>
               </div>
@@ -275,9 +286,10 @@ export default function Login() {
               <div className="mt-3">
                 <button
                   type="submit"
-                  disabled={!!regError}
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:bg-gray-400"
+                  disabled={!!regError || isRegLoading}
+                  className="flex w-full justify-center items-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:disabled:bg-gray-300"
                 >
+                  {isRegLoading && <ButtonLoadingSpinner />}
                   Sign up
                 </button>
               </div>

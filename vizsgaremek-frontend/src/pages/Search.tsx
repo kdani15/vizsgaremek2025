@@ -3,14 +3,17 @@ import MovieCard from "../components/MovieCard";
 import { Movie } from "../types/Movie";
 import { useEffect, useState } from "react";
 import api from "../utils/api";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function Search() {
   const { state } = useLocation();
   const { term } = state;
   const [movies, setMovies] = useState<Movie[]>([]);
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    setIsLoading(true);
     const fetchMovies = async () => {
       try {
         const res = await api.get("movies/search", {
@@ -23,6 +26,8 @@ export default function Search() {
         setMovies(res.data);
       } catch (err) {
         setError("Failed to fetch movies");
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -33,7 +38,9 @@ export default function Search() {
     return <p style={{ color: "red" }}>{error}</p>;
   }
 
-  return (
+  return isLoading ? (
+    <LoadingSpinner />
+  ) : (
     <div className="px-4 sm:px-6 lg:px-12">
       <h1 className="text-center my-10">
         Show results for: <span className="font-bold">{term}</span>
