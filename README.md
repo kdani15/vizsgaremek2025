@@ -13,3 +13,7 @@
 - `backend/`: NestJS + PostgreSQL + TypeORM
 - `frontend/`: ReactJS
 - `db/`: ER-diagram, dump, dokumentáció ???
+
+## Dokumentáció
+
+https://docs.google.com/document/d/1DWCfKMEHh5xqMZZyeSJjFvVF4HHQDSCVPjkobSCBuVM/edit?tab=t.0
