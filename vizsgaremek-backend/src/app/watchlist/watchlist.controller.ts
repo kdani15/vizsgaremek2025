@@ -14,7 +14,7 @@ import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
 import { Request } from 'express';
 
 interface AuthenticatedRequest extends Request {
-  user: { id: string; email?: string /* other user properties */ };
+  user: { id: string; email?: string };
 }
 
 @Controller('watchlist')

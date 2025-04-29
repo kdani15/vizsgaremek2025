@@ -15,6 +15,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 const navigation = [
   { name: "Movies", href: "/movies", current: true },
   { name: "Watchlist", href: "/watchlist", current: false },
+  { name: "Seen", href: "/seen", current: false },
 ];
 
 function classNames(...classes: string[]) {

@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Watchlist from "./pages/Watchlist";
 import ListOfMoviesByAttribute from "./pages/ListOfMoviesByAttribute";
 import Movies from "./pages/Movies";
+import Seen from "./pages/Seen";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               />
               <Route path="/movies" element={<Movies />} />
               <Route path="/watchlist" element={<Watchlist />} />
+              <Route path="/seen" element={<Seen />} />
               <Route path="/movie/:id" element={<MovieDetails />} />
               <Route path="/search" element={<Search />} />
             </Route>

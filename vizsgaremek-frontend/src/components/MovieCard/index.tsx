@@ -1,5 +1,8 @@
-import { FolderMinusIcon } from "@heroicons/react/20/solid";
-import { FolderPlusIcon } from "@heroicons/react/24/outline";
+import { EyeIcon, FolderMinusIcon } from "@heroicons/react/20/solid";
+import {
+  EyeIcon as EyeIconOutline,
+  FolderPlusIcon,
+} from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -8,6 +11,11 @@ import {
   removeFromWatchlist,
 } from "../../utils/watchlistApi";
 import IconButton from "../IconButton";
+import {
+  addToSeenlist,
+  isMovieSeen,
+  removeFromSeenlist,
+} from "../../utils/seenApi";
 
 type Props = {
   id: string;
@@ -26,13 +34,14 @@ export default function MovieCard({
   onRemove,
   releaseYear,
 }: Props) {
-  const [error, setError] = useState("");
   const [isMovieIsOnWatchlist, setIsMovieIsOnWatchlist] =
     useState<boolean>(false);
+  const [isSeen, setIsSeen] = useState<boolean>(false);
 
   useEffect(() => {
     if (id) {
       checkIfMovieIsOnWatchlist(id);
+      checkIfMovieWasSeen(id);
     }
   }, [id]);
 
@@ -41,7 +50,45 @@ export default function MovieCard({
       const isMovieOnWatchlist = await getIsMovieOnWatchlist(movieId);
       setIsMovieIsOnWatchlist(isMovieOnWatchlist);
     } catch (err) {
-      setError("Failed to fetch movies");
+      console.log("Failed to check if it was watched");
+    }
+  };
+
+  const checkIfMovieWasSeen = async (movieId: string) => {
+    try {
+      const wasMovieWatched = await isMovieSeen(movieId);
+      setIsSeen(wasMovieWatched);
+    } catch (err) {
+      console.log("Failed to fetch movies", err);
+    }
+  };
+
+  const handleRemoveFromSeenlist = async (
+    event: React.MouseEvent<HTMLButtonElement>,
+    movieId: string
+  ) => {
+    event.stopPropagation();
+    event.preventDefault();
+    try {
+      await removeFromSeenlist(movieId);
+      setIsSeen(false);
+    } catch (err) {
+      console.log("Failed to fetch movies", err);
+    }
+  };
+
+  const handleAddToSeenlist = async (
+    event: React.MouseEvent<HTMLButtonElement>,
+    movieId: string
+  ) => {
+    event.stopPropagation();
+    event.preventDefault();
+
+    try {
+      addToSeenlist(movieId);
+      setIsSeen(true);
+    } catch (err) {
+      console.log("Failed to fetch movies", err);
     }
   };
 
@@ -57,7 +104,7 @@ export default function MovieCard({
 
       if (onRemove) onRemove();
     } catch (err) {
-      setError("Failed to fetch movies");
+      console.log("Failed to fetch movies", err);
     }
   };
 
@@ -72,7 +119,7 @@ export default function MovieCard({
       addToWatchlist(movieId);
       setIsMovieIsOnWatchlist(true);
     } catch (err) {
-      setError("Failed to fetch movies");
+      console.log("Failed to fetch movies", err);
     }
   };
 
@@ -84,9 +131,20 @@ export default function MovieCard({
           backgroundImage: `url(${thumbnailImg})`,
           textShadow: "0 1px 1px black",
         }}
-        className="w-full h-[0] pb-[150%] bg-cover bg-center flex flex-col justify-between h-64 rounded-lg shadow-md text-white p-4 font-semibold uppercase opacity-90 hover:opacity-100 transition"
+        className="w-full h-[0] pb-[150%] bg-cover bg-center flex flex-col justify-between h-64 rounded-lg shadow-md text-white py-4 px-2 font-semibold uppercase opacity-90 hover:opacity-100 transition"
       >
-        <div className="flex justify-end opacity-60 hover:opacity-100 transition">
+        <div className="flex justify-end">
+          {isSeen ? (
+            <IconButton
+              onClick={(event) => handleRemoveFromSeenlist(event, id)}
+            >
+              <EyeIcon className="w-5 h-5" />
+            </IconButton>
+          ) : (
+            <IconButton onClick={(event) => handleAddToSeenlist(event, id)}>
+              <EyeIconOutline className="w-5 h-5" />
+            </IconButton>
+          )}
           {isMovieIsOnWatchlist ? (
             <IconButton
               onClick={(event) => handleRemoveFromWatchlist(event, id)}
