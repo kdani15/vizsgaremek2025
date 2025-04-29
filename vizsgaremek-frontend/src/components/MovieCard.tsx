@@ -12,7 +12,8 @@ type Props = {
   title: string;
   thumbnailImg: string;
   releaseYear: string;
-  onRemove?: () => Promise<void>;
+  onRemoveFromWatchlist?: () => void;
+  onRemoveFromSeenlist?: () => void;
 };
 
 export default function MovieCard({
@@ -20,6 +21,8 @@ export default function MovieCard({
   title,
   thumbnailImg,
   releaseYear,
+  onRemoveFromWatchlist,
+  onRemoveFromSeenlist,
 }: Props) {
   const { watchlist, seenList, updateWatchlist, updateSeenlist } =
     useMovieStatus();
@@ -32,6 +35,7 @@ export default function MovieCard({
 
   const handleRemoveFromWatchlist = () => {
     updateWatchlist(id, false);
+    onRemoveFromWatchlist && onRemoveFromWatchlist();
   };
 
   const handleAddToSeenlist = () => {
@@ -40,6 +44,7 @@ export default function MovieCard({
 
   const handleRemoveFromSeenlist = () => {
     updateSeenlist(id, false);
+    onRemoveFromSeenlist && onRemoveFromSeenlist();
   };
 
   return (
