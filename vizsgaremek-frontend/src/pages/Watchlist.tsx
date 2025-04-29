@@ -6,7 +6,6 @@ import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function Watchlist() {
   const [movies, setMovies] = useState<Movie[]>([]);
-  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const fetchMovies = async () => {
@@ -20,7 +19,7 @@ export default function Watchlist() {
       });
       setMovies(res.data.map((watchlist: any) => watchlist.movie));
     } catch (err) {
-      setError("Failed to fetch movies");
+      console.log("Failed to fetch movies: ", err);
     } finally {
       setIsLoading(false);
     }
@@ -33,7 +32,7 @@ export default function Watchlist() {
   return isLoading ? (
     <LoadingSpinner />
   ) : (
-    <div className="px-4 sm:px-6 lg:px-12">
+    <div className="px-4 sm:px-6 lg:px-12 fadeIn max-w-[1440px] mx-auto">
       <h1 className="mt-10 text-center text-3xl mb-10">Watchlist</h1>
 
       {movies.length ? (

@@ -9,3 +9,6 @@ export type Movie = {
   onList: boolean;
   ratings?: any;
 };
+
+export const VALID_MOVIE_ATTRS = ["latest", "all"];
+export type MovieAttr = (typeof VALID_MOVIE_ATTRS)[number];

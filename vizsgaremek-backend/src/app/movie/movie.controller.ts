@@ -43,7 +43,7 @@ export class MovieController {
     return this.movieService.findByTitle(title, limit, offset);
   }
 
-  @Get()
+  @Get('all')
   async findAll(
     @Query('limit') limit: number = 21,
     @Query('offset') offset: number = 0,

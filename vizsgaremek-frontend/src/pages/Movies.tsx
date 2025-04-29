@@ -6,10 +6,9 @@ import api from "../utils/api";
 import { getMoviesFetchAmount } from "../utils/getMoviesFetchAmount";
 import LoadingSpinner from "../components/LoadingSpinner";
 
-export default function Dashboard() {
+export default function Movies() {
   const [newMovies, setNewMovies] = useState<Movie[]>([]);
   const [movies, setMovies] = useState<Movie[]>([]);
-  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -28,13 +27,13 @@ export default function Dashboard() {
       });
       setNewMovies(res.data);
     } catch (err) {
-      setError("Failed to fetch movies");
+      console.log("Could not fetch movies: ", err);
     }
   };
 
   const fetchMovies = async () => {
     try {
-      const res = await api.get("movies", {
+      const res = await api.get("movies/all", {
         params: {
           limit: getMoviesFetchAmount(),
           offset: 0,
@@ -42,7 +41,7 @@ export default function Dashboard() {
       });
       setMovies(res.data);
     } catch (err) {
-      setError("Failed to fetch movies");
+      console.log("Could not fetch movies: ", err);
     }
   };
 
@@ -55,10 +54,10 @@ export default function Dashboard() {
   return isLoading ? (
     <LoadingSpinner />
   ) : (
-    <div className="px-4 sm:px-6 lg:px-12 fadeIn">
+    <div className="px-4 sm:px-6 lg:px-12 fadeIn max-w-[1440px] mx-auto">
       <div className="flex justify-between mt-10 mb-2">
         <h2>New movies:</h2>
-        <Link to="/dashboard">All new</Link>
+        <Link to="/movies/latest">All new</Link>
       </div>
 
       {movies.length ? (
@@ -73,7 +72,7 @@ export default function Dashboard() {
 
       <div className="flex justify-between mt-10 mb-2">
         <h2>Other movies:</h2>
-        <Link to="/dashboard">All other</Link>
+        <Link to="/movies/all">All other</Link>
       </div>
 
       {movies.length ? (

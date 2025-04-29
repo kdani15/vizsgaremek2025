@@ -34,7 +34,7 @@ export default function Login() {
       localStorage.setItem("jwt", res.data.access_token);
       localStorage.setItem("refresh_jwt", res.data.refreshToken);
       localStorage.setItem("user", JSON.stringify(res.data.user));
-      navigate("/dashboard");
+      navigate("/movies");
     } catch (err) {
       setError("Invalid login");
     } finally {
@@ -71,7 +71,7 @@ export default function Login() {
   };
 
   return (
-    <div className="container mx-auto py-5">
+    <div className="container mx-auto py-5 max-w-[1440px]">
       <img
         alt="Your Company"
         src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"

@@ -2,13 +2,14 @@ import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import { RequireAuth } from "./auth/RequireAuth";
 import Search from "./pages/Search";
 import MovieDetails from "./pages/MovieDetails";
 import Footer from "./components/Footer";
 import Watchlist from "./pages/Watchlist";
+import ListOfMoviesByAttribute from "./pages/ListOfMoviesByAttribute";
+import Movies from "./pages/Movies";
 
 function App() {
   return (
@@ -20,7 +21,11 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Navigate to="/login" replace />} />
             <Route element={<RequireAuth />}>
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route
+                path="/movies/:attr"
+                element={<ListOfMoviesByAttribute />}
+              />
+              <Route path="/movies" element={<Movies />} />
               <Route path="/watchlist" element={<Watchlist />} />
               <Route path="/movie/:id" element={<MovieDetails />} />
               <Route path="/search" element={<Search />} />

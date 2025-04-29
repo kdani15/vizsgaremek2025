@@ -13,7 +13,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 
 const navigation = [
-  { name: "Movies", href: "/dashboard", current: true },
+  { name: "Movies", href: "/movies", current: true },
   { name: "Watchlist", href: "/watchlist", current: false },
 ];
 

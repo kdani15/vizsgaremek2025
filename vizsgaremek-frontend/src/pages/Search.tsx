@@ -41,7 +41,7 @@ export default function Search() {
   return isLoading ? (
     <LoadingSpinner />
   ) : (
-    <div className="px-4 sm:px-6 lg:px-12">
+    <div className="px-4 sm:px-6 lg:px-12 fadeIn max-w-[1440px] mx-auto">
       <h1 className="text-center my-10">
         Show results for: <span className="font-bold">{term}</span>
       </h1>
