@@ -10,6 +10,7 @@ import { FolderMinusIcon } from "@heroicons/react/20/solid";
 import { FolderPlusIcon } from "@heroicons/react/24/outline";
 import IconButton from "../components/IconButton";
 import api from "../utils/api";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 export default function MovieDetails() {
   const { id } = useParams<{ id: string }>();
@@ -17,6 +18,7 @@ export default function MovieDetails() {
   const [error, setError] = useState("");
   const [isMovieIsOnWatchlist, setIsMovieIsOnWatchlist] =
     useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleRemoveFromWatchlist = async (
     event: React.MouseEvent<HTMLButtonElement>,
@@ -57,18 +59,20 @@ export default function MovieDetails() {
   };
 
   useEffect(() => {
-    if (movie && movie.id) {
-      checkIfMovieIsOnWatchlist(movie.id);
+    if (!id) {
+      return;
     }
-  }, [movie]);
 
-  useEffect(() => {
+    setIsLoading(true);
     const fetchMovies = async () => {
       try {
         const res = await api.get(`movies/${id}`);
+        checkIfMovieIsOnWatchlist(id);
         setMovie(res.data);
       } catch (err) {
         setError("Failed to fetch movies");
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -79,8 +83,10 @@ export default function MovieDetails() {
     return <p style={{ color: "red" }}>{error}</p>;
   }
 
-  return movie ? (
-    <>
+  return isLoading ? (
+    <LoadingSpinner />
+  ) : movie ? (
+    <div className="fadeIn">
       <header
         className="relative h-[40vw] bg-cover bg-center"
         style={{ backgroundImage: `url(${movie.posterImg})` }}
@@ -114,7 +120,7 @@ export default function MovieDetails() {
         <h2 className="underline text-xl mb-3">About the movie:</h2>
         <p>{movie.description}</p>
       </section>
-    </>
+    </div>
   ) : (
     <p>Could not find any movies you are looking for.</p>
   );
