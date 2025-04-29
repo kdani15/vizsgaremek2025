@@ -22,6 +22,7 @@ export default function Login() {
     regEmail?: string,
     regPassword?: string
   ) => {
+    clearLocalstorage();
     setIsLoginLoading(true);
     e && e.preventDefault();
     const loginEmail = regEmail ? regEmail : email;
@@ -40,6 +41,12 @@ export default function Login() {
     } finally {
       setIsLoginLoading(false);
     }
+  };
+
+  const clearLocalstorage = () => {
+    localStorage.removeItem("jwt");
+    localStorage.removeItem("refresh_jwt");
+    localStorage.removeItem("user");
   };
 
   const checkPasswordMatch = (confirmationPassword: string) => {

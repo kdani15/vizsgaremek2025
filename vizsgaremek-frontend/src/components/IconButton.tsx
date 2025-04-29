@@ -2,7 +2,8 @@ import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
+  // onClick: (event: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
+  onClick: () => void;
 };
 
 export default function IconButton({ children, ...rest }: Props) {

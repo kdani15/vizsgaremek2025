@@ -1,4 +1,10 @@
+import { SeenResponse } from "../types/Seen";
 import api from "./api";
+
+export async function getSeenMovies(): Promise<SeenResponse[]> {
+  const res = await api.get("/seen");
+  return res.data;
+}
 
 export const isMovieSeen = async (movieId: string): Promise<boolean> => {
   const res = await api.get(`seen/${movieId}`);

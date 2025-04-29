@@ -19,6 +19,13 @@ interface AuthenticatedRequest extends Request {
 export class SeenController {
   constructor(private readonly seenService: SeenService) {}
 
+  @Get()
+  @UseGuards(JwtAuthGuard)
+  async getSeen(@Req() req: AuthenticatedRequest) {
+    const userId = req.user.id;
+    return this.seenService.getSeenMovies(userId);
+  }
+
   @Post('add')
   @UseGuards(JwtAuthGuard)
   async markAsSeen(
@@ -47,12 +54,5 @@ export class SeenController {
   ) {
     const userId = req.user.id;
     return this.seenService.getHasMovieBeenSeen(movieId, userId);
-  }
-
-  @Get()
-  @UseGuards(JwtAuthGuard)
-  async getSeen(@Req() req: AuthenticatedRequest) {
-    const userId = req.user.id;
-    return this.seenService.getSeenMovies(userId);
   }
 }

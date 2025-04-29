@@ -1,4 +1,10 @@
+import { WatchlistResponse } from "../types/Watchlist";
 import api from "./api";
+
+export async function getWatchlistMovies(): Promise<WatchlistResponse[]> {
+  const res = await api.get("/watchlist");
+  return res.data;
+}
 
 export const getIsMovieOnWatchlist = async (
   movieId: string
