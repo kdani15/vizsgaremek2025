@@ -56,7 +56,7 @@ api.interceptors.response.use(
           {
             withCredentials: true,
             headers: {
-              Authorization: `Bearer ${localStorage.getItem("refresh_jwt")}`, // Important!
+              Authorization: `Bearer ${localStorage.getItem("refresh_jwt")}`, // Important!!!
             },
           }
         );

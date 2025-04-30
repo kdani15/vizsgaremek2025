@@ -19,7 +19,7 @@ import { LocalAuthGuard } from './guards/local-auth.guard';
       useFactory: async (configService: ConfigService) => ({
         secret: configService.get<string>('JWT_SECRET'),
         signOptions: {
-          expiresIn: configService.get<string>('JWT_EXPIRES_IN') || '3600s', // fallback to 1 hour
+          expiresIn: configService.get<string>('JWT_EXPIRES_IN') || '3600s', // Fallback to 1 hour
         },
       }),
     }),

@@ -19,7 +19,7 @@ export default function Watchlist() {
       });
       setMovies(res.data.map((watchlist: any) => watchlist.movie));
     } catch (err) {
-      console.log("Failed to fetch movies: ", err);
+      console.error("Failed to fetch movies: ", err);
     } finally {
       setIsLoading(false);
     }

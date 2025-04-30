@@ -55,7 +55,7 @@ export default function ListOfMoviesByAttribute() {
           setHasMore(false);
         }
       } catch (err) {
-        console.log("Error happened: ", err);
+        console.error("Error happened: ", err);
       } finally {
         setIsLoadingMore(false);
         setIsLoading(false);
@@ -87,7 +87,6 @@ export default function ListOfMoviesByAttribute() {
         hasMore
       ) {
         setIsLoadingMore(true);
-        console.log("SET OFFSET SCROLL");
         setOffset((prev) => prev + movieFetchAmount);
         fetchMovies();
       }

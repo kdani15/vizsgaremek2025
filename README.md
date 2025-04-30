@@ -5,14 +5,14 @@
 - Regisztráció, bejelentkezés
 - Filmek kedvelése
 - Keresés cím alapján
-- Filmoldal: leírás, értékelések, kiadés éve, stb.
-- Lejátszási listák ???
+- Filmoldal: poszter, leírás, kiadás éve, stb...
+- Lejátszási lista
 
 ## Struktúra
 
 - `backend/`: NestJS + PostgreSQL + TypeORM
 - `frontend/`: ReactJS
-- `db/`: ER-diagram, dump, dokumentáció ???
+- `db/`: ER-diagram, dump
 
 ## Dokumentáció
 

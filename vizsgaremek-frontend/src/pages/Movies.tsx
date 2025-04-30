@@ -27,7 +27,7 @@ export default function Movies() {
       });
       setNewMovies(res.data);
     } catch (err) {
-      console.log("Could not fetch movies: ", err);
+      console.error("Could not fetch movies: ", err);
     }
   };
 
@@ -41,7 +41,7 @@ export default function Movies() {
       });
       setMovies(res.data);
     } catch (err) {
-      console.log("Could not fetch movies: ", err);
+      console.error("Could not fetch movies: ", err);
     }
   };
 
