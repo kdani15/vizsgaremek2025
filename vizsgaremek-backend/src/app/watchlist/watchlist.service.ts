@@ -84,6 +84,19 @@ export class WatchlistService {
     }
   }
 
+  async getWatchlistIdsByUser(userId: string): Promise<Watchlist[]> {
+    try {
+      return await this.watchlistRepository.find({
+        where: { user: { id: userId } },
+        relations: ['movie'],
+        order: { createdAt: 'DESC' },
+      });
+    } catch (e) {
+      this.logger.error('Failed to retrieve watchlist', e.stack);
+      throw new InternalServerErrorException('Failed to retrieve watchlist');
+    }
+  }
+
   async getIsMovieOnWatchlist(
     movieId: string,
     userId: string,

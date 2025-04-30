@@ -53,6 +53,22 @@ export class SeenService {
     }
   }
 
+  async getHasMovieBeenSeen(movieId: string, userId: string): Promise<boolean> {
+    try {
+      const result = await this.seenRepository.findOne({
+        where: {
+          movie: { id: movieId },
+          user: { id: userId },
+        },
+      });
+
+      return !!result;
+    } catch (e) {
+      this.logger.error('Failed to retrieve seen status', e.stack);
+      throw new InternalServerErrorException('Failed to retrieve seen status');
+    }
+  }
+
   async getSeenMovies(userId: string): Promise<Seen[]> {
     return this.seenRepository.find({
       where: { user: { id: userId } },

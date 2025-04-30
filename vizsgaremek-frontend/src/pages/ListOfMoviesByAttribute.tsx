@@ -108,10 +108,7 @@ export default function ListOfMoviesByAttribute() {
     <LoadingSpinner />
   ) : (
     <div className="px-4 py-4 sm:px-6 lg:px-12 fadeIn max-w-[1440px] mx-auto">
-      <h1 className="mt-10 text-center text-3xl mb-10">
-        {title}
-        {movies.length}
-      </h1>
+      <h1 className="mt-10 text-center text-3xl mb-10">{title}</h1>
       {movies.length ? (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {movies.map((movie) => (

@@ -1,61 +1,40 @@
 import { useParams } from "react-router-dom";
 import { Movie } from "../types/Movie";
 import { useEffect, useState } from "react";
+import { FolderMinusIcon, EyeIcon } from "@heroicons/react/20/solid";
 import {
-  addToWatchlist,
-  getIsMovieOnWatchlist,
-  removeFromWatchlist,
-} from "../utils/watchlistApi";
-import { FolderMinusIcon } from "@heroicons/react/20/solid";
-import { FolderPlusIcon } from "@heroicons/react/24/outline";
+  FolderPlusIcon,
+  EyeIcon as EyeIconOutline,
+} from "@heroicons/react/24/outline";
 import IconButton from "../components/IconButton";
 import api from "../utils/api";
 import LoadingSpinner from "../components/LoadingSpinner";
+import { useMovieStatus } from "../context/MovieStatusContext";
 
 export default function MovieDetails() {
   const { id } = useParams<{ id: string }>();
   const [movie, setMovie] = useState<Movie>();
   const [error, setError] = useState("");
-  const [isMovieIsOnWatchlist, setIsMovieIsOnWatchlist] =
-    useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { watchlist, seenList, updateWatchlist, updateSeenlist } =
+    useMovieStatus();
+  const isMovieOnWatchlist = watchlist[id!] ?? false;
+  const isSeen = seenList[id!] ?? false;
 
-  const handleRemoveFromWatchlist = async (
-    event: React.MouseEvent<HTMLButtonElement>,
-    movieId: string
-  ) => {
-    event.stopPropagation();
-    event.preventDefault();
-    try {
-      await removeFromWatchlist(movieId);
-      setIsMovieIsOnWatchlist(false);
-    } catch (err) {
-      setError("Failed to fetch movies");
-    }
+  const handleAddToWatchlist = () => {
+    updateWatchlist(id!, true);
   };
 
-  const handleAddToWatchlist = async (
-    event: React.MouseEvent<HTMLButtonElement>,
-    movieId: string
-  ) => {
-    event.stopPropagation();
-    event.preventDefault();
-
-    try {
-      addToWatchlist(movieId);
-      setIsMovieIsOnWatchlist(true);
-    } catch (err) {
-      setError("Failed to fetch movies");
-    }
+  const handleRemoveFromWatchlist = () => {
+    updateWatchlist(id!, false);
   };
 
-  const checkIfMovieIsOnWatchlist = async (movieId: string) => {
-    try {
-      const isMovieOnWatchlist = await getIsMovieOnWatchlist(movieId);
-      setIsMovieIsOnWatchlist(isMovieOnWatchlist);
-    } catch (err) {
-      setError("Failed to fetch movies");
-    }
+  const handleAddToSeenlist = () => {
+    updateSeenlist(id!, true);
+  };
+
+  const handleRemoveFromSeenlist = () => {
+    updateSeenlist(id!, false);
   };
 
   useEffect(() => {
@@ -67,7 +46,6 @@ export default function MovieDetails() {
     const fetchMovies = async () => {
       try {
         const res = await api.get(`movies/${id}`);
-        checkIfMovieIsOnWatchlist(id);
         setMovie(res.data);
       } catch (err) {
         setError("Failed to fetch movies");
@@ -92,16 +70,21 @@ export default function MovieDetails() {
         style={{ backgroundImage: `url(${movie.posterImg})` }}
       >
         <div className="absolute top-[3rem] right-[1rem] ">
-          {isMovieIsOnWatchlist ? (
-            <IconButton
-              onClick={(event) => handleRemoveFromWatchlist(event, movie.id)}
-            >
+          {isSeen ? (
+            <IconButton onClick={handleRemoveFromSeenlist}>
+              <EyeIcon className="w-5 h-5" />
+            </IconButton>
+          ) : (
+            <IconButton onClick={handleAddToSeenlist}>
+              <EyeIconOutline className="w-5 h-5" />
+            </IconButton>
+          )}
+          {isMovieOnWatchlist ? (
+            <IconButton onClick={handleRemoveFromWatchlist}>
               <FolderMinusIcon className="w-5 h-5" />
             </IconButton>
           ) : (
-            <IconButton
-              onClick={(event) => handleAddToWatchlist(event, movie.id)}
-            >
+            <IconButton onClick={handleAddToWatchlist}>
               <FolderPlusIcon className="w-5 h-5" />
             </IconButton>
           )}

@@ -5,14 +5,14 @@ import api from "../utils/api";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { getMoviesFetchAmount } from "../utils/getMoviesFetchAmount";
 
-export default function Watchlist() {
+export default function Seen() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const fetchMovies = async () => {
     setIsLoading(true);
     try {
-      const res = await api.get("watchlist", {
+      const res = await api.get("seen", {
         params: {
           limit: getMoviesFetchAmount() * 4,
           offset: 0,
@@ -20,7 +20,7 @@ export default function Watchlist() {
       });
       setMovies(res.data.map((watchlist: any) => watchlist.movie));
     } catch (err) {
-      console.error("Failed to fetch movies: ", err);
+      console.log("Failed to fetch movies: ", err);
     } finally {
       setIsLoading(false);
     }
@@ -41,7 +41,7 @@ export default function Watchlist() {
   ) : (
     <div className="px-4 sm:px-6 lg:px-12 fadeIn max-w-[1440px] mx-auto">
       <h1 className="mt-10 text-center text-3xl mb-10">
-        Movies you would like to watch
+        Movies you have already seen
       </h1>
 
       {movies.length ? (
@@ -50,7 +50,7 @@ export default function Watchlist() {
             <MovieCard
               key={movie.id}
               {...movie}
-              onRemoveFromWatchlist={() => handleRemove(movie.id)}
+              onRemoveFromSeenlist={() => handleRemove(movie.id)}
             />
           ))}
         </div>
